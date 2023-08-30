@@ -293,6 +293,7 @@ pokemon-colorscripts-git | display pokemon sprites
 - [ ] Add battery and brightness indicator/notification for laptop users
 - [ ] Add Eww widgets? (maybe later)
 - [ ] Make sure the locals are set correctly
+- [ ] Change vscode settings.json
 </details>
 
 
