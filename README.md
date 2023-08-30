@@ -292,7 +292,7 @@ pokemon-colorscripts-git | display pokemon sprites
 - [ ] Sync PC/keyboard hw rgb with current theme (themeswitch.sh + openrgb)
 - [ ] Add battery and brightness indicator/notification for laptop users
 - [ ] Add Eww widgets? (maybe later)
-
+- [ ] Make sure the locals are set correctly
 </details>
 
 
