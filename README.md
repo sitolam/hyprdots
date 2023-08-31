@@ -17,7 +17,7 @@ https://user-images.githubusercontent.com/106020512/235429801-e8b8dae2-c1ad-4e23
 
 ### Installation
 
-The installation script is made for Arch, but may work for few Arch based distros.
+The installation script is made for Arch, but **may** work on some Arch based distros.   
 For Debian, please refer **Senshi111**'s version [here](https://github.com/Senshi111/debian-hyprland-hyprdots).
 
 > **Warning**
@@ -55,9 +55,11 @@ To add your own custom theme, please refer [theming.md](https://github.com/prasa
     - [x] Material-Sakura
     - [x] Graphite-Mono
     - [x] Cyberpunk-Edge
-    - [ ] Frosted-Glass (maybe later)
     - [ ] Gruvbox-Retro (maybe later)
     - [ ] Nordic-Blue (maybe later)
+
+- Contributors themes
+    - [x] Frosted-Glass by T-Crypt
 
 | Catppuccin-Mocha |
 | :-: |
@@ -99,6 +101,11 @@ To add your own custom theme, please refer [theming.md](https://github.com/prasa
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_1.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_cedge_2.png) |
 
+| Frosted-Glass |
+| :-: |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_1.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_frosted_2.png) |
+
 
 ### Styles
 
@@ -122,6 +129,8 @@ To add your own custom theme, please refer [theming.md](https://github.com/prasa
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_4.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_5.png) |
 | ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_6.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_7.png) |
+| ![](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_8.png) |
 
 | Wlogout Menu |
 | :-: |
@@ -289,6 +298,7 @@ pokemon-colorscripts-git | display pokemon sprites
 - [x] Make wlogout configs dynamic and sync with theme
 - [x] Wallpaper select script with rofi menu
 - [ ] Fix rofi configs/scripts for dynamic scaling
+- [ ] Add vertical configs for waybar
 - [ ] Sync PC/keyboard hw rgb with current theme (themeswitch.sh + openrgb)
 - [ ] Add battery and brightness indicator/notification for laptop users
 - [ ] Add Eww widgets? (maybe later)
@@ -306,4 +316,3 @@ pokemon-colorscripts-git | display pokemon sprites
 - [ ] Flatpak QT apps does not follow system theme
 
 </details>
-
