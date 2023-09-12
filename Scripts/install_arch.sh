@@ -15,4 +15,3 @@ cat << EOF >> /etc/profile
      export LC_MEASUREMENT="nl_BE"
      export LC_NAME="nl_BE"
      EOF
-     ```
