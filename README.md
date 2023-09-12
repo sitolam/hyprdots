@@ -25,6 +25,52 @@ For Debian, please refer **Senshi111**'s version [here](https://github.com/Sensh
 > Install script will auto-detect nvidia card and install nvidia-dkms drivers for your kernel.   
 > Nvidia drm will be enabled in grub, so please [ensure](https://wiki.archlinux.org/title/NVIDIA) your nvidia card supports dkms drivers/hyprland.   
 
+But anyway… let's move on to the installation process!
+
+1. Download iso
+
+   ```sh
+   # Yoink nixos-unstable
+   wget -O nixos.iso https://channels.nixos.org/nixos-unstable/latest-nixos-minimal-x86_64-linux.iso
+
+   # Write it to a flash drive
+   cp nixos.iso /dev/sdX
+   ```
+
+2. Boot into the installer.
+
+3. Connect to the internet
+  
+   ```bash
+   $ ping 8.8.8.8 # if this is successful you can skip this step
+   ```
+   ```bash
+   # Find your interface
+   $ iwctl
+   $ device list
+   
+   # Search for networks
+   $ station <interface> scan
+   $ station <interface> get-networks
+
+   # Connect to the internet
+   $ station <interface> connect <network>
+   $ exit
+
+   # Check if you have internet
+   $ ping 8.8.8.8 
+   ```
+
+4. Install arch 
+
+   ```bash
+   # Recommended
+   $ archinstall
+
+   # Use reflector to make installation process faster
+   $ reflector --latest 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
+   ```
+
 After minimal Arch install (with grub), clone and execute -
 ```shell
 pacman -Sy git
