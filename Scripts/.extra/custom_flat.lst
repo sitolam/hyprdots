@@ -1,17 +1,9 @@
 # System
 com.github.tchx84.Flatseal #Flatseal
-# org.gnome.Boxes #Boxes
-# com.usebottles.bottles #Bottles
-com.raggesilver.BlackBox #BlackBox
 
 # Social
-com.discordapp.Discord #Discord
-#io.github.spacingbat3.webcord #Webcord
-org.signal.Signal #Signal
 
 # Productivity
-# md.obsidian.Obsidian #Obsidian
-# org.mozilla.Thunderbird #Thunderbird
 
 # Graphics
 org.inkscape.Inkscape #Inkscape
@@ -23,16 +15,11 @@ org.gnome.eog #ImageViewer
 io.gitlab.theevilskeleton.Upscaler #ImageUpscaler
 
 # Photography
-# org.gnome.Shotwell #Shotwell
-# org.darktable.Darktable #Darktable
-# org.kde.digikam
 
 # Audio/Video
 com.obsproject.Studio #Obs
-com.github.rafostar.Clapper #Clapper
-# com.spotify.Client #Spotify
 
 # Gaming
 hu.kramo.Cartridges #Cartridges
-# com.github.Matoking.protontricks #ProtonTricks
-# net.davidotek.pupgui2 #ProtonUp
+com.github.Matoking.protontricks #ProtonTricks
+net.davidotek.pupgui2 #ProtonUp
