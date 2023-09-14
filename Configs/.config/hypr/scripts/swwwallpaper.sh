@@ -21,8 +21,12 @@ Wall_Update()
         convert -strip -resize 2000 -gravity center -extent 2000 -quality 90 $x_wall ${cacheDir}/${curTheme}/rofi.${cacheImg}
     fi
 
-    if [ ! -f "${cacheDir}/${curTheme}/blur.${cacheImg}" ] ; then
-        convert -strip -scale 10% -blur 0x3 -resize 100% $x_wall ${cacheDir}/${curTheme}/blur.${cacheImg}
+    if [ ! -f "${cacheDir}/${curTheme}/${cacheImg}.blur" ] ; then
+        convert -strip -scale 10% -blur 0x3 -resize 100% $x_wall ${cacheDir}/${curTheme}/${cacheImg}.blur
+    fi
+
+    if [ ! -f "${cacheDir}/${curTheme}/${cacheImg}.dcol" ] ; then
+        magick ${cacheDir}/${curTheme}/${cacheImg}.blur -colors 6 -define histogram:unique-colors=true -format "%c" histogram:info: > ${cacheDir}/${curTheme}/${cacheImg}.dcol
     fi
 
     sed -i "/^1|/c\1|${curTheme}|${x_update}" $ctlFile

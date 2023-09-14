@@ -61,8 +61,12 @@ do
             convert -strip -resize 2000 -gravity center -extent 2000 -quality 90 "${wpFullName}" ${CacheDir}/${theme}/rofi.${wpBaseName}
         fi
 
-        if [ ! -f "${CacheDir}/${theme}/blur.${wpBaseName}" ] ; then
-            convert -strip -scale 10% -blur 0x3 -resize 100% "${wpFullName}" ${CacheDir}/${theme}/blur.${wpBaseName}
+        if [ ! -f "${CacheDir}/${theme}/${wpBaseName}.blur" ] ; then
+            convert -strip -scale 10% -blur 0x3 -resize 100% "${wpFullName}" ${CacheDir}/${theme}/${wpBaseName}.blur
+        fi
+
+        if [ ! -f "${CacheDir}/${theme}/${wpBaseName}.dcol" ] ; then
+            magick "${CacheDir}/${theme}/${wpBaseName}.blur" -colors 6 -define histogram:unique-colors=true -format "%c" histogram:info: > ${CacheDir}/${theme}/${wpBaseName}.dcol
         fi
     done
 
