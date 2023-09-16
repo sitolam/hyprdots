@@ -57,8 +57,8 @@ do
             convert "${wpFullName}" -thumbnail 500x500^ -gravity center -extent 500x500 "${CacheDir}/${theme}/${wpBaseName}"
         fi
 
-        if [ ! -f "${CacheDir}/${theme}/rofi.${wpBaseName}" ] ; then
-            convert -strip -resize 2000 -gravity center -extent 2000 -quality 90 "${wpFullName}" ${CacheDir}/${theme}/rofi.${wpBaseName}
+        if [ ! -f "${CacheDir}/${theme}/${wpBaseName}.rofi" ] ; then
+            convert -strip -resize 2000 -gravity center -extent 2000 -quality 90 "${wpFullName}" ${CacheDir}/${theme}/${wpBaseName}.rofi
         fi
 
         if [ ! -f "${CacheDir}/${theme}/${wpBaseName}.blur" ] ; then

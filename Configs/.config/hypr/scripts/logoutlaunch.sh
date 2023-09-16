@@ -1,24 +1,41 @@
 #!/usr/bin/env sh
 
+# Check if wlogout is already running
+if pgrep -x "wlogout" > /dev/null
+then
+    # Kill wlogout
+    pkill -x "wlogout"
+    exit 0
+fi
+
+# set file variables
+wLayout="$HOME/.config/wlogout/layout_$1"
+wlTmplt="$HOME/.config/wlogout/style_$1.css"
+
+if [ ! -f $wLayout ] || [ ! -f $wlTmplt ] ; then
+    echo "ERROR: Style $1 not found..."
+    exit 1;
+fi
+
 # detect monitor y res
-res=`cat /sys/class/drm/*/modes | head -1 | cut -d 'x' -f 2`
+x_mon=$( cat /sys/class/drm/*/modes | head -1  ) 
+y_mon=$( echo $x_mon | cut -d 'x' -f 2 )
+x_mon=$( echo $x_mon | cut -d 'x' -f 1 )
 
 # scale config layout and style
 case $1 in
     1)  wlColms=6
-        export mgn=$(( res * 10 / 100 ))
-        export hvr=$(( res * 5 / 100 )) ;;
+        export mgn=$(( y_mon * 28 / 100 ))
+        export hvr=$(( y_mon * 23 / 100 )) ;;
     2)  wlColms=2
-        export mgn=$(( res * 8 / 100 ))
-        export mgn2=$(( res * 65 / 100 ))
-        export hvr=$(( res * 3 / 100 ))
-        export hvr2=$(( res * 60 / 100 )) ;;
-    *)  echo "Error: invalid parameter passed..."
-        exit 1 ;;
+        export x_mgn=$(( x_mon * 35 / 100 ))
+        export y_mgn=$(( y_mon * 25 / 100 ))
+        export x_hvr=$(( x_mon * 32 / 100 ))
+        export y_hvr=$(( y_mon * 20 / 100 )) ;;
 esac
 
 # scale font size
-export fntSize=$(( res * 2 / 100 ))
+export fntSize=$(( y_mon * 2 / 100 ))
 
 # detect gtk system theme
 export gtkThm=`gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g"`
@@ -34,16 +51,9 @@ hypr_border=`awk -F '=' '{if($1~" rounding ") print $2}' $hyprTheme | sed 's/ //
 export active_rad=$(( hypr_border * 5 ))
 export button_rad=$(( hypr_border * 8 ))
 
-# set file variables
-wLayout="$HOME/.config/wlogout/layout_$1"
-wlTmplt="$HOME/.config/wlogout/style_$1.css"
-
 # eval config files
 wlStyle=`envsubst < $wlTmplt`
 
-# eval padding
-y_pad=$(( res * 20 / 100 ))
-
 # launch wlogout
-wlogout -b $wlColms -c 0 -r 0 -T $y_pad -B $y_pad --layout $wLayout --css <(echo "$wlStyle") --protocol layer-shell
+wlogout -b $wlColms -c 0 -r 0 -m 0 --layout $wLayout --css <(echo "$wlStyle") --protocol layer-shell
 

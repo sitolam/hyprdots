@@ -5,13 +5,11 @@ com.github.tchx84.Flatseal #Flatseal
 
 # Productivity
 
-# Graphics
+# Image/Graphics
 org.inkscape.Inkscape #Inkscape
 org.kde.krita #Krita
 org.gimp.GIMP #Gimp
-
-# Image
-org.gnome.eog #ImageViewer
+org.blender.Blender #Blender
 io.gitlab.theevilskeleton.Upscaler #ImageUpscaler
 
 # Photography
