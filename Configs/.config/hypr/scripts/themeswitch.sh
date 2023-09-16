@@ -78,7 +78,6 @@ getName=`basename $getWall`
 ln -fs $getWall $ConfDir/swww/wall.set
 ln -fs $WallCache/${ThemeSet}/${getName}.rofi $ConfDir/swww/wall.rofi
 ln -fs $WallCache/${ThemeSet}/${getName}.blur $ConfDir/swww/wall.blur
-ln -fs $WallCache/${ThemeSet}/${getName}.dcol $ConfDir/swww/wall.dcol
 $BaseDir/swwwallpaper.sh
 
 if [ $? -ne 0 ] ; then
