@@ -1,18 +1,58 @@
 {
     "workbench.colorTheme": "Catppuccin-Mocha",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.wav": "default"
+    },
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 12,
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
-    "security.workspace.trust.untrustedFiles": "newWindow",
+    "files.autoSave": "afterDelay",
+    "security.workspace.trust.untrustedFiles": "open",
     "security.workspace.trust.startupPrompt": "never",
     "security.workspace.trust.enabled": false,
     "editor.minimap.side": "left",
     "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
     "extensions.autoUpdate": false,
     "workbench.statusBar.visible": false,
     "terminal.external.linuxExec": "kitty",
     "terminal.explorerKind": "both",
     "terminal.sourceControlRepositoriesKind": "both",
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.languages.allowGuestCommandControl": true,
+    "liveshare.notebooks.allowGuestExecuteCells": true,
+    "liveshare.allowGuestDebugControl": true,
+    "scm.alwaysShowActions": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "liveshare.audio.joinCallBehavior": "accept",
+    "tabnine.experimentalAutoImports": true,
+    "workbench.iconTheme": "vscode-icons",
+    "liveshare.anonymousGuestApproval": "accept",
+    "cSpell.userWords": [
+        "computerchoose"
+    ],
+    "cSpell.language": ",nl",
+    "cSpell.customFolderDictionaries": [
+    
+    ],
+    "liveshare.presence": true,
+    "liveshare.connectionMode": "relay",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "liveshare.allowInvites": "all",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.titleBarStyle": "custom",
+    "git.autofetch": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "diffEditor.ignoreTrimWhitespace": false,
 }
