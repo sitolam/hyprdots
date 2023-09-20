@@ -24,7 +24,7 @@
     "custom/power": {
         "format": "{}",
         "exec": "echo ; echo  logout",
-        "on-click": "~/.config/hypr/scripts/logoutlaunch.sh 1",
+        "on-click": "~/.config/hypr/scripts/logoutlaunch.sh 2",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -103,8 +103,8 @@
     },
 
     "clock": {
-        "format": "{:%H:%M  %a %d}",
-        "format-alt": "{:%I:%M %p 󰃭 %b %Y}",
+        "format": "{:%I:%M %p 󰃭 %a %d}",
+        "format-alt": "{:%H:%M  %b %Y}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>"
     },
 
