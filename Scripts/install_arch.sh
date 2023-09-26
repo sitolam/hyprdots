@@ -31,6 +31,9 @@ select yn in "Yes" "No"; do
 done
 sleep 1
 clear
+
+echo "${bold}Wifi${normal}"
+
 wget -q --tries=10 --timeout=20 --spider http://google.com
 if [[ $? -eq 0 ]]; then
     echo "${bold}Online${normal}"
