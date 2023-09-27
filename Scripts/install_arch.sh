@@ -29,6 +29,16 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
+
+while true; do
+    read -p "Do you wish to install this program? (Y/n) " yn
+    case $yn in
+        [Yy]* ) make install; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
+
 sleep 1
 clear
 
@@ -81,3 +91,19 @@ sleep 1
 clear
 
 
+echo "${bold}Partitioning${normal}"
+sleep 0.5
+clear
+
+echo "Making the partitions" 
+
+select yn in "Automatic" "Guided"; do
+    case $yn in
+        Automatic ) 
+
+                    ; break;;
+        Guided ) 
+                
+                ; break;;
+    esac
+done
