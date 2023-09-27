@@ -172,3 +172,7 @@ swapon /dev/disk/by-label/$swap
 
 # Installing the packages
 pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
+
+
+# Configuring fstab
+genfstab -L /mnt >> /mnt/etc/fstab
