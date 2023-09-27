@@ -171,8 +171,51 @@ swapon /dev/disk/by-label/$swap
 
 
 # Installing the packages
+echo "${bold}Installing the packages ......${normal}"
 pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
-
+sleep 1
+clear
 
 # Configuring fstab
+echo "${bold}Configuring fstab ........${normal}"
 genfstab -L /mnt >> /mnt/etc/fstab
+sleep 1
+clear
+
+cat <<EOF > /mnt/root/install_arch_chroot.sh
+
+
+
+
+
+
+
+
+exit # to leave the chroot
+EOF
+
+
+arch-chroot /mnt /root/install_arch_chroot.sh
+
+# Remove the script
+echo "${bold}Removing the chroot script ........${normal}"
+rm /mnt/root/install_arch_chroot.sh
+sleep 1
+clear
+
+# Unmount the drives
+echo "${bold}Unmounting the drives ........${normal}"
+umount -a
+sleep 1
+clear
+
+# Reboot
+echo "${bold}Your system is installed${normal}"
+while true; do
+    read -p "Do you want to reboot? (Y/n) " yn
+    case $yn in
+        [Yy]|"" ) reboot; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
