@@ -16,9 +16,9 @@ clear
 while true; do
     read -p "${bold}Do you want to change your keyboard layout?${normal} (Y/n) " yn
     case $yn in
-        [Yy]|"" ) echo "${bold}Do you want to change your keyboard layout?${normal}"
+        [Yy]|"" )
                 while true; do
-                    read -p "${bold}Do you want to change your keyboard layout?${normal} (Y/n) " yn
+                    read -p "${bold}Do you want to search your keyboard layout by giving your language, country or layout name?${normal} (Y/n) " yn
                     case $yn in
                         [Yy]|"" ) read -p "Search term: " search_term
                                 localectl list-keymaps | grep -i $search_term; break;;
@@ -92,14 +92,51 @@ echo "${bold}Partitioning${normal}"
 sleep 0.5
 clear
 
-echo "Making the partitions" 
+echo "${bold}Making the partitions${normal}" 
+
+calc() { awk "BEGIN{print $*}"; }
+
+# Specify the disk device
+lsblk
+read -p "What disk you want to partition to? (ex./dev/sda) " device
+sleep 0.5
+clear
+
+
+# Create the GPT partition table
+sudo parted --script "$device" mklabel gpt
+
+# Create the boot partition (512MB, FAT32)
+sudo parted --script "$device" mkpart primary fat32 1MiB 513MiB
 
 while true; do
-    read -p "How do you want to do the partitioning?  (Guided:G/Automatic:a) " ga
-    case $ga in
-        [Gg]|"" ) echo "YO"; break;;
-        [Aa]* ) break;;
-        * ) echo "Please answer "G" or "a"."
+    read -p "Do you want a swap partition? (Y/n) " yn
+    case $yn in
+        [Yy]|"" ) 
+                read -p "How big of a swap do you want? (ex.16 (in GB)) " swapsize
+
+                # Create the swap partition (size from input)
+                sudo parted --script "$device" mkpart primary linux-swap 513MiB "$(calc 513+$swapsize*1024)MiB"
+        
+                # Create the root partition (rest of the disk, ext4)
+                sudo parted --script "$device" mkpart primary ext4 "$(calc 513+$swapsize*1024)MiB" 100%
+
+                # Format the partitions
+                sudo mkswap -L archswapt "${device}2"        # Swap partition
+                sudo mkfs.ext4 -L archroott "${device}3"     # Root partition
+                break;;
+        [Nn]* ) 
+                # Create the root partition (rest of the disk, ext4)
+                sudo parted --script "$device" mkpart primary ext4 513MiB 100%
+
+                # Format the partitions
+                sudo mkfs.ext4 -L archroott "${device}2"     # Root partition
+                break;;
+        * ) echo "Please answer yes or no."
             echo ""
     esac
 done
+
+
+# Format the partitions
+sudo mkfs.fat -F 32 -n ARCHBOOTT "${device}1"  # Boot partition
