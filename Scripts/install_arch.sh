@@ -23,14 +23,16 @@ while true; do
                         [Yy]|"" ) read -p "Search term: " search_term
                                 localectl list-keymaps | grep -i $search_term; break;;
                         [Nn]* ) break;;
-                        * ) echo "Please answer yes or no."; break;;
+                        * ) echo "Please answer yes or no."
+                            echo ""
                     esac
                 done
                 read -p "Layout: " key_layout
                 loadkeys $key_layout
                 break;;
         [Nn]* ) break;;
-        * ) echo "Please answer yes or no."; break;;
+        * ) echo "Please answer yes or no."
+            echo ""
     esac
 done
 
@@ -92,13 +94,12 @@ clear
 
 echo "Making the partitions" 
 
-select yn in "Automatic" "Guided"; do
-    case $yn in
-        Automatic ) 
-
-                    ; break;;
-        Guided ) 
-                
-                ; break;;
+while true; do
+    read -p "How do you want to do the partitioning?  (Guided:G/Automatic:a) " ga
+    case $ga in
+        [Gg]|"" ) echo "YO"; break;;
+        [Aa]* ) break;;
+        * ) echo "Please answer "G" or "a"."
+            echo ""
     esac
 done
