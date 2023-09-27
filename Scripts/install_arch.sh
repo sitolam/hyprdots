@@ -167,3 +167,8 @@ mount /dev/disk/by-label/$boot /mnt/boot/efi
 
 # Turning on the swap partition
 swapon /dev/disk/by-label/$swap
+
+
+
+# Installing the packages
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
