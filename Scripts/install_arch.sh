@@ -184,6 +184,7 @@ clear
 
 cat <<EOF > /mnt/root/install_arch_chroot.sh
 # Set the time zone
+echo "${bold}Setting timezone ........ ${normal}"
 while true; do
     read -p "Is this your time and date: $(date)? (y/N) " yn
     case $yn in
@@ -194,9 +195,9 @@ while true; do
         * ) echo "Please answer yes or no."; break;;
     esac
 done
-
-
-
+hwclock --systohc
+sleep 1
+clear
 
 
 
