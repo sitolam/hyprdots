@@ -12,7 +12,7 @@ echo "${bold}Welcome to the installation part of arch${normal}"
 sleep 1
 clear
 
-
+# Keyboard
 while true; do
     read -p "${bold}Do you want to change your keyboard layout?${normal} (Y/n) " yn
     case $yn in
@@ -39,7 +39,7 @@ done
 sleep 1
 clear
 
-
+# Wifi
 echo "${bold}Wifi${normal}"
 
 wget -q --tries=10 --timeout=20 --spider http://google.com
@@ -77,7 +77,7 @@ else
 fi
 clear
 
-
+# Reflector and pacman optimazition
 echo "${bold}Making some things faster .....${normal}"
 reflector --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
@@ -88,7 +88,21 @@ sleep 1
 clear
 
 
+# Partitioning
 echo "${bold}Partitioning${normal}"
+sleep 0.5
+clear
+
+echo "${bold}Naming the partitions${normal}"
+echo ""
+echo "A partition label should only be used once!"
+sleep 1
+
+echo "These are the existting partition labels:"
+ls -l /dev/disk/by-label
+read -p "How do you want to call your root partition? (default:archroot) " root
+read -p "How do you want to call your swap partition? (default:archswap) " swap
+read -p "How do you want to call your boot partition? (default:ARCHBOOT) " boot
 sleep 0.5
 clear
 
@@ -122,15 +136,15 @@ while true; do
                 sudo parted --script "$device" mkpart primary ext4 "$(calc 513+$swapsize*1024)MiB" 100%
 
                 # Format the partitions
-                sudo mkswap -L archswapt "${device}2"        # Swap partition
-                sudo mkfs.ext4 -L archroott "${device}3"     # Root partition
+                sudo mkswap -L $swap "${device}2"        # Swap partition
+                sudo mkfs.ext4 -L $root "${device}3"     # Root partition
                 break;;
         [Nn]* ) 
                 # Create the root partition (rest of the disk, ext4)
                 sudo parted --script "$device" mkpart primary ext4 513MiB 100%
 
                 # Format the partitions
-                sudo mkfs.ext4 -L archroott "${device}2"     # Root partition
+                sudo mkfs.ext4 -L $root "${device}2"     # Root partition
                 break;;
         * ) echo "Please answer yes or no."
             echo ""
@@ -139,4 +153,17 @@ done
 
 
 # Format the partitions
-sudo mkfs.fat -F 32 -n ARCHBOOTT "${device}1"  # Boot partition
+sudo mkfs.fat -F 32 -n $boot "${device}1"  # Boot partition
+
+
+# Mounting the partitions
+
+# Mounting the root partition
+mount /dev/disk/by-label/$root /mnt
+
+# Mounting the boot partition
+mkdir -p /mnt/boot/efi
+mount /dev/disk/by-label/$boot /mnt/boot/efi
+
+# Turning on the swap partition
+swapon /dev/disk/by-label/$swap
