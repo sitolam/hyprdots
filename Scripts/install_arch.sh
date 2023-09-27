@@ -183,7 +183,17 @@ sleep 1
 clear
 
 cat <<EOF > /mnt/root/install_arch_chroot.sh
-
+# Set the time zone
+while true; do
+    read -p "Is this your time and date: $(date)? (y/N) " yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]|"" ) new_timezone=$(tzselect)
+                test -n "$new_timezone" && ln -sf /usr/share/zoneinfo/$new_timezone /etc/localtime
+                ;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
 
 
 
