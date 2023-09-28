@@ -201,6 +201,17 @@ clear
 
 
 
+# Adding the needed locales
+echo "${bold}Adding locales ........ ${normal}"
+sed -i "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" /etc/locale.gen
+sed -i "s/#en_US ISO-8859-1/en_US ISO-8859-1/g" /etc/locale.gen
+sed -i "s/#nl_BE.UTF-8 UTF-8/nl_BE.UTF-8 UTF-8/g" /etc/locale.gen
+sed -i "s/#nl_BE ISO-8859-15/nl_BE ISO-8859-15/g" /etc/locale.gen
+sed -i "s/#nl_BE@euro ISO-8859-15/nl_BE@euro ISO-8859-15/g" /etc/locale.gen
+sleep 1
+clear
+
+
 
 exit # to leave the chroot
 EOF
