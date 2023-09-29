@@ -93,80 +93,95 @@ echo "${bold}Partitioning${normal}"
 sleep 0.5
 clear
 
-echo "${bold}Naming the partitions${normal}"
-echo ""
-echo "A partition label should only be used once!"
-sleep 1
-
-echo "These are the existting partition labels:"
-ls -l /dev/disk/by-label
-read -p "How do you want to call your root partition? (default:archroot) " root
-read -p "How do you want to call your swap partition? (default:archswap) " swap
-read -p "How do you want to call your boot partition? (default:ARCHBOOT) " boot
-sleep 0.5
-clear
-
-echo "${bold}Making the partitions${normal}" 
-
-calc() { awk "BEGIN{print $*}"; }
-
-# Specify the disk device
-lsblk
-read -p "What disk you want to partition to? (ex./dev/sda) " device
-sleep 0.5
-clear
-
-
-# Create the GPT partition table
-sudo parted --script "$device" mklabel gpt
-
-# Create the boot partition (512MB, FAT32)
-sudo parted --script "$device" mkpart primary fat32 1MiB 513MiB
-
 while true; do
-    read -p "Do you want a swap partition? (Y/n) " yn
-    case $yn in
-        [Yy]|"" ) 
-                read -p "How big of a swap do you want? (ex.16 (in GB)) " swapsize
+    read -p "How do you want to make you partitions? (Guided:G/Automatic:a(The whole disk)" ga
+    case $ga in
+        [Gg]|"" )  
+                
 
-                # Create the swap partition (size from input)
-                sudo parted --script "$device" mkpart primary linux-swap 513MiB "$(calc 513+$swapsize*1024)MiB"
-        
-                # Create the root partition (rest of the disk, ext4)
-                sudo parted --script "$device" mkpart primary ext4 "$(calc 513+$swapsize*1024)MiB" 100%
+
+                break;;
+        [Aa]* ) 
+                echo "${bold}Naming the partitions${normal}"
+                echo ""
+                echo "A partition label should only be used once!"
+                sleep 1
+
+                echo "These are the existting partition labels:"
+                ls -l /dev/disk/by-label
+                read -p "How do you want to call your root partition? (default:archroot) " root
+                read -p "How do you want to call your swap partition? (default:archswap) " swap
+                read -p "How do you want to call your boot partition? (default:ARCHBOOT) " boot
+                sleep 0.5
+                clear
+
+                echo "${bold}Making the partitions${normal}" 
+
+                calc() { awk "BEGIN{print $*}"; }
+
+                # Specify the disk device
+                lsblk
+                read -p "What disk you want to partition to? (ex./dev/sda) " device
+                sleep 0.5
+                clear
+
+
+                # Create the GPT partition table
+                sudo parted --script "$device" mklabel gpt
+
+                # Create the boot partition (512MB, FAT32)
+                sudo parted --script "$device" mkpart primary fat32 1MiB 513MiB
+
+                while true; do
+                    read -p "Do you want a swap partition? (Y/n) " yn
+                    case $yn in
+                        [Yy]|"" ) 
+                                read -p "How big of a swap do you want? (ex.16 (in GB)) " swapsize
+
+                                # Create the swap partition (size from input)
+                                sudo parted --script "$device" mkpart primary linux-swap 513MiB "$(calc 513+$swapsize*1024)MiB"
+                        
+                                # Create the root partition (rest of the disk, ext4)
+                                sudo parted --script "$device" mkpart primary ext4 "$(calc 513+$swapsize*1024)MiB" 100%
+
+                                # Format the partitions
+                                sudo mkswap -L $swap "${device}2"        # Swap partition
+                                sudo mkfs.ext4 -L $root "${device}3"     # Root partition
+                                break;;
+                        [Nn]* ) 
+                                # Create the root partition (rest of the disk, ext4)
+                                sudo parted --script "$device" mkpart primary ext4 513MiB 100%
+
+                                # Format the partitions
+                                sudo mkfs.ext4 -L $root "${device}2"     # Root partition
+                                break;;
+                        * ) echo "Please answer yes or no."
+                            echo ""
+                    esac
+                done
+
 
                 # Format the partitions
-                sudo mkswap -L $swap "${device}2"        # Swap partition
-                sudo mkfs.ext4 -L $root "${device}3"     # Root partition
-                break;;
-        [Nn]* ) 
-                # Create the root partition (rest of the disk, ext4)
-                sudo parted --script "$device" mkpart primary ext4 513MiB 100%
+                sudo mkfs.fat -F 32 -n $boot "${device}1"  # Boot partition
 
-                # Format the partitions
-                sudo mkfs.ext4 -L $root "${device}2"     # Root partition
+
+                # Mounting the partitions
+
+                # Mounting the root partition
+                mount /dev/disk/by-label/$root /mnt
+
+                # Mounting the boot partition
+                mkdir -p /mnt/boot/efi
+                mount /dev/disk/by-label/$boot /mnt/boot/efi
+
+                # Turning on the swap partition
+                swapon /dev/disk/by-label/$swap
+                
                 break;;
-        * ) echo "Please answer yes or no."
-            echo ""
+        * ) echo "Please answer yes or no."; break;;
     esac
 done
 
-
-# Format the partitions
-sudo mkfs.fat -F 32 -n $boot "${device}1"  # Boot partition
-
-
-# Mounting the partitions
-
-# Mounting the root partition
-mount /dev/disk/by-label/$root /mnt
-
-# Mounting the boot partition
-mkdir -p /mnt/boot/efi
-mount /dev/disk/by-label/$boot /mnt/boot/efi
-
-# Turning on the swap partition
-swapon /dev/disk/by-label/$swap
 
 
 
