@@ -97,5 +97,12 @@ clear
 
 
 # Root password
+echo "${bold}Defining root password ........${normal}"
+passwd root
+sleep 1
+clear
+
+
+# Root password
 
 exit # to leave the chroot
