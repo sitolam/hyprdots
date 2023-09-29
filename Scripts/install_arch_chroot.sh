@@ -1,4 +1,16 @@
 #!/bin/bash
+#|---/ /+----------------------------------------+---/ /|#
+#|--/ /-| Script to install arch in chroot        |--/ /-|#
+#|-/ /--| Sitolam                                 |-/ /--|#
+#|/ /---+----------------------------------------+/ /---|#
+
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+clear
+echo "${bold}Welcome to the installation part of arch in chroot${normal}"
+sleep 1
+clear
 
 # Set the time zone
 echo "${bold}Setting timezone ........ ${normal}"
@@ -70,6 +82,17 @@ LC_ADDRESS="nl_BE"
 LC_MEASUREMENT="nl_BE"
 LC_NAME="nl_BE"
 EOF
+sleep 1
+clear
+
+
+
+# Defining the hostname
+echo "${bold}Defining hostname ........${normal}"
+read -p "Which hostname do you want?:" hostname
+echo $hostname > /etc/hostname
+sleep 1
+clear
 
 
 
