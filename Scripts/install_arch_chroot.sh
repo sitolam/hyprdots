@@ -136,6 +136,20 @@ clear
 
 
 
+# Grub
+echo "${bold}Installing grub ........${normal}"
+sleep 0.5
+grub-install
+sleep 1
+clear
+
+echo "${bold}Configuring grub ........${normal}"
+sleep 0.5
+grub-mkconfig -o /boot/grub/grub.cfg #TODO - os-prober
+sleep 1
+clear
+
+
 # Root password
 
 exit # to leave the chroot
