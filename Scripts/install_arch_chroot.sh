@@ -122,6 +122,20 @@ sleep 1
 clear
 
 
+
+# Enabling services
+echo "${bold}Enabling services ........${normal}"
+sleep 0.5
+
+echo "Enabling the NetworkManger service ........"
+systemctl enable NetworkManager
+#TODO - add the ssh service
+
+sleep 1
+clear
+
+
+
 # Root password
 
 exit # to leave the chroot
