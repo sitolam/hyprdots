@@ -221,7 +221,7 @@ clear
 
 # Set the right locales
 echo "${bold}Setting the right locales ........ ${normal}"
-cat << EOF >> /etc/profile
+cat << INNER_EOF >> /etc/profile
 #locale settings
 export LANG=en_US.UTF-8
 #export LANGUAGE="en_US:en"
@@ -236,8 +236,8 @@ export LC_TELEPHONE="nl_BE"
 export LC_ADDRESS="nl_BE"
 export LC_MEASUREMENT="nl_BE"
 export LC_NAME="nl_BE"
-EOF
-cat > /etc/locale.conf << EOF
+INNER_EOF
+cat > /etc/locale.conf << INNER_EOF
 #locale settings
 LANG=en_US.UTF-8
 #export LANGUAGE="en_US:en"
@@ -252,7 +252,11 @@ LC_TELEPHONE="nl_BE"
 LC_ADDRESS="nl_BE"
 LC_MEASUREMENT="nl_BE"
 LC_NAME="nl_BE"
-EOF
+INNER_EOF
+
+
+
+# Root password
 
 exit # to leave the chroot
 EOF
