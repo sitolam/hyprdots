@@ -52,3 +52,10 @@ swapon /dev/disk/by-label/archswap
 # Use this command to check if everything is ok
 lsblk
 ```
+
+#### Exiting to the script
+
+```bash
+# Type 'exit' to go back to the script
+exit
+```
