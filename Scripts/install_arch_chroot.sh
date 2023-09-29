@@ -103,6 +103,25 @@ sleep 1
 clear
 
 
+
+# Configuring the user account
+echo "${bold}Configuring the user account ........${normal}"
+sleep 0.5
+
+echo "Making the user account"
+read -p "Enter your name for the user account: " username
+useradd -m -G wheel -s /bin/bash $username
+
+echo "Setting the password for the user account"
+passwd $username
+
+echo "Making the user a root user"
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
+
+sleep 1
+clear
+
+
 # Root password
 
 exit # to leave the chroot
