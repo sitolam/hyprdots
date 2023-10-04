@@ -58,7 +58,7 @@ But anyway… let's move on to the installation process!
    $ exit
 
    # Check if you have internet
-   $ ping arch_linux.org
+   $ ping archlinux.org
    ```
 
 4. Download the script
