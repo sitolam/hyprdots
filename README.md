@@ -75,8 +75,7 @@ But anyway… let's move on to the installation process!
 
    ```bash
    # Make the script executable
-   chmod +x install-arch
-sh
+   chmod +x install-arch.sh
 
    # Excute the script and follow the steps
    $ ./install_arch.sh
