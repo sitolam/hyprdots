@@ -93,7 +93,7 @@ sleep 0.5
 clear
 
 while true; do
-    read -p "How do you want to make you partitions? (Guided:G/Automatic:a(The whole disk)" ga
+    read -p "How do you want to make you partitions? (Guided:G/Automatic:a(The whole disk) " ga
     case $ga in
         [Gg]|"" )  
                 echo "${bold}Go to:${normal} https://github.com/Sitolam/hyprdots/blob/master/partitioning.md ${bold}for the guidelines${normal}"
