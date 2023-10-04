@@ -66,6 +66,10 @@ But anyway… let's move on to the installation process!
    ```bash
    # Download the script
    $ wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh
+    
+   # Make the script executable
+   chmod +x install-arch
+sh
 
    # Excute the script and follow the steps
    $ ./install_arch.sh
