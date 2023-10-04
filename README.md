@@ -42,7 +42,7 @@ But anyway… let's move on to the installation process!
 3. Connect to the internet
   
    ```bash
-   $ ping 8.8.8.8 # if this is successful you can skip this step
+   $ ping archlinux.org # if this is successful you can skip this step
    ```
    ```bash
    # Find your interface
@@ -58,7 +58,7 @@ But anyway… let's move on to the installation process!
    $ exit
 
    # Check if you have internet
-   $ ping 8.8.8.8 
+   $ ping arch_linux.org
    ```
 
 4. Install arch 
