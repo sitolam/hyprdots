@@ -61,23 +61,15 @@ But anyway… let's move on to the installation process!
    $ ping arch_linux.org
    ```
 
-4. Install arch 
+4. Download the script
 
    ```bash
-   # Recommended
-   $ archinstall
+   # Download the script
+   $ wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh
 
-   # Use reflector to make installation process faster
-   $ reflector --latest 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
-   ```
+   # Excute the script and follow the steps
+   $ ./install_arch.sh
 
-After minimal Arch install (with grub), clone and execute -
-```shell
-pacman -Sy git
-git clone https://github.com/prasanthrangan/hyprdots ~/Hyprdots
-cd ~/Hyprdots/Scripts
-./install.sh
-```
 
 > **Note**
 >
