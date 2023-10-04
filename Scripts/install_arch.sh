@@ -81,7 +81,6 @@ clear
 echo "${bold}Making some things faster .....${normal}"
 reflector --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
-sudo nano /etc/pacman.conf
 sed -i "s/#ParalellDownloads = 5/ParalellDownloads = 5/g" /etc/pacman.conf
 
 sleep 1
