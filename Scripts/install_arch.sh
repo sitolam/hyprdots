@@ -202,7 +202,8 @@ clear
 
 # Chroot
 
-# Copy the script over
+# Download the script
+wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot.sh
 cp install_arch_chroot.sh /mnt/root/install_arch_chroot.sh
 
 # Chroot and execute the script
