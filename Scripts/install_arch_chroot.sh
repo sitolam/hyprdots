@@ -172,8 +172,7 @@ echo "${bold}Installing the theme ........${normal}"
 sleep 0.5
 
 echo "Changing to the user account ........"
-su $username
-sleep 0.5
+su -c '
 
 echo "Making the directory ........"
 mkdir ~/hyprdots
@@ -205,4 +204,9 @@ echo "Installing the flatpaks ........"
 
 
 exit # leave the user account
+
+'
+sleep 0.5
+
+
 exit # to leave the chroot
