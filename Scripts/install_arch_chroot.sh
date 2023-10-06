@@ -172,7 +172,7 @@ echo "${bold}Installing the theme ........${normal}"
 sleep 0.5
 
 echo "Changing to the user account ........"
-su -c '
+su otis -c '
 
 echo "Making the directory ........"
 mkdir ~/hyprdots
