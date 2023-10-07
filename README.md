@@ -65,7 +65,7 @@ But anyway… let's move on to the installation process!
 
    ```bash
    # Install wget
-   $ pacman -Sy wget
+   $ pacman -Syy wget
    ```
 
    ```bash
