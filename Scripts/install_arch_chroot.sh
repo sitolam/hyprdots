@@ -89,7 +89,7 @@ clear
 
 # Defining the hostname
 echo "${bold}Defining hostname ........${normal}"
-read -p "Which hostname do you want?:" hostname
+read -p "Which hostname do you want?: " hostname
 echo $hostname > /etc/hostname
 sleep 1
 clear
@@ -183,7 +183,7 @@ cd ~/hyprdots
 sleep 0.5
 
 echo "Cloning the theme ........"
-git clone https://github.com/Sitolam/hyprdots
+git clone --depth 1 https://github.com/Sitolam/hyprdots
 cd hyprdots/Scripts
 sleep 1
 
