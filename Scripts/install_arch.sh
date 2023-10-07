@@ -188,7 +188,7 @@ done
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
-pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git wget networkmanager
 sleep 1
 clear
 
