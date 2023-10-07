@@ -172,41 +172,21 @@ clear
 echo "${bold}Installing the theme ........${normal}"
 sleep 0.5
 
+
 echo "Changing to the user account ........"
-su $username -c '
-
-echo "Making the directory ........"
-mkdir ~/hyprdots
 sleep 0.5
 
-echo "Changing the directory ........"
-cd ~/hyprdots
+echo "Downloading the chroot user install script ........"
 sleep 0.5
+wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot_user.sh
+chmod +x install_arch_chroot_user.sh
+cp install_arch_chroot_user.sh /home/$username/install_arch_chroot_user.sh
 
-echo "Cloning the theme ........"
-git clone --depth 1 https://github.com/Sitolam/hyprdots
-cd hyprdots/Scripts
-sleep 1
-
-clear
-
-echo "${bold}Are you ready?!${normal}"
-sleep 1
-clear
-
-echo "${bold}Installing the theme ........ ${normal}"
+echo "Starting the chroot user install script ........"
 sleep 0.5
-./install.sh -drs custom_apps.lst
-sleep 1
-clear
-
-echo "Installing the flatpaks ........"
-./.extra/install_fpk.sh
+su $username /home/$username/install_arch_chroot_user.sh
 
 
-exit # leave the user account
-
-'
 sleep 0.5
 
 
