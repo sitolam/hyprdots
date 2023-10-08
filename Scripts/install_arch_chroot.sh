@@ -188,7 +188,7 @@ sleep 0.5
 
 echo "Downloading the chroot user install script ........"
 sleep 0.5
-wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot_user.sh
+curl -O https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot_user.sh
 chmod +x install_arch_chroot_user.sh
 cp install_arch_chroot_user.sh /home/$username/install_arch_chroot_user.sh
 

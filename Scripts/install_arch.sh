@@ -188,7 +188,7 @@ done
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
-pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git wget networkmanager
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
 sleep 1
 clear
 
@@ -203,7 +203,7 @@ clear
 # Chroot
 
 # Download the script
-wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot.sh
+curl -O https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch_chroot.sh
 chmod +x install_arch_chroot.sh
 cp install_arch_chroot.sh /mnt/root/install_arch_chroot.sh
 
