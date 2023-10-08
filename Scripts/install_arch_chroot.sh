@@ -127,7 +127,7 @@ while true; do
         * ) echo "Please answer yes or no."; break;;
     esac
 done
-sed -i 's/#%wheel  ALL=(ALL)       NOPASSWD: ALL/%wheel  ALL=(ALL)       NOPASSWD: ALL/g' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
 
 sleep 1
 clear
