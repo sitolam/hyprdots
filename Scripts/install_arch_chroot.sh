@@ -117,7 +117,17 @@ echo "Setting the password for the user account"
 passwd $username
 
 echo "Making the user a root user"
-sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
+
+while true; do
+    read -p "Do you want passwordless sudo? (y/N) " yn
+    case $yn in
+        [Yy]* ) 
+                passwordless_sudo=1; break;;
+        [Nn]|"" ) passwordless_sudo=0;break;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
+sed -i 's/#%wheel  ALL=(ALL)       NOPASSWD: ALL/%wheel  ALL=(ALL)       NOPASSWD: ALL/g' /etc/sudoers
 
 sleep 1
 clear
@@ -189,5 +199,7 @@ su $username /home/$username/install_arch_chroot_user.sh
 
 sleep 0.5
 
+if [ $passwordless_sudo -eq 0 ]; then
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 exit # to leave the chroot
