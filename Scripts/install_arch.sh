@@ -43,7 +43,7 @@ clear
 # Wifi
 echo "${bold}Wifi${normal}"
 
-wget -q --tries=10 --timeout=20 --spider http://google.com
+curl -sSf -m 20 http://google.com
 if [[ $? -eq 0 ]]; then
     echo "${bold}Online${normal}"
 else
