@@ -61,25 +61,13 @@ But anyway… let's move on to the installation process!
    $ ping archlinux.org
    ```
  
-4. Download the script
+4. Download and excecute the script
 
    ```bash
-   # Install wget
-   $ pacman -Syy wget
+   # Run this command to start the installation
+   bash <(curl -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh)
    ```
 
-   ```bash
-   # Download the script
-   $ wget -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh
-   ```
-
-   ```bash
-   # Make the script executable
-   chmod +x install-arch.sh
-
-   # Excute the script and follow the steps
-   $ ./install_arch.sh
-   ```
 
 > **Note**
 >
