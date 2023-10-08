@@ -65,7 +65,7 @@ But anyway… let's move on to the installation process!
 
    ```bash
    # Run this command to start the installation
-   bash <(curl -L https://raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh)
+   bash <(curl -L raw.githubusercontent.com/Sitolam/hyprdots/master/Scripts/install_arch.sh)
    ```
 
 
