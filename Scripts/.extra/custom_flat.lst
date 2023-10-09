@@ -9,7 +9,7 @@ com.github.tchx84.Flatseal #Flatseal
 org.inkscape.Inkscape #Inkscape
 org.kde.krita #Krita
 org.gimp.GIMP #Gimp
-org.blender.Blender #Blender
+#org.blender.Blender #Blender
 io.gitlab.theevilskeleton.Upscaler #ImageUpscaler
 
 # Photography
