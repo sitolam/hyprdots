@@ -80,7 +80,7 @@ clear
 
 # Reflector and pacman optimazition
 echo "${bold}Making some things faster .....${normal}"
-sed -i "s/#ParalellDownloads = 5/ParalellDownloads = 5/g" /etc/pacman.conf
+sed -i "s/#ParallelDownloads = 5/ParallelDownloads = 5/g" /etc/pacman.conf
 reflector --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 
 sleep 1
