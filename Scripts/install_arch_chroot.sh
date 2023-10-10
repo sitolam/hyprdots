@@ -171,7 +171,7 @@ sed -i 's/HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont bl
 sleep 0.5
 
 echo "Regenerating the images ........"
-mkinitcpio -p linux-zen
+mkinitcpio -n -p linux-zen
 
 sleep 1
 clear
