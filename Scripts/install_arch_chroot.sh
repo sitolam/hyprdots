@@ -170,8 +170,8 @@ echo "Editing hook (changing autodetect to block)"
 sed -i 's/HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems fsck)/HOOKS=(base udev block modconf kms keyboard keymap consolefont autodetect filesystems fsck)/g' /etc/mkinitcpio.conf
 sleep 0.5
 
-echo "Regenerating the images ........"
-mkinitcpio -n -p linux-zen
+# echo "Regenerating the images ........"
+# mkinitcpio -n -p linux-zen
 
 sleep 1
 clear
