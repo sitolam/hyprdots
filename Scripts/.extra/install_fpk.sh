@@ -15,7 +15,7 @@ fi
 
 if ! pkg_installed flatpak
     then
-    sudo pacman -S flatpak
+    sudo pacman -S flatpak --noconfirm
 fi
 
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
