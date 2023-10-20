@@ -187,7 +187,7 @@ while true; do
     case $yn in
         [Yy]|"" ) os_prober = "os-prober"
                   export os_prober
-                ; break;;
+                  break;;
         [Nn]* ) os_prober = ""
                 break;;
         * ) echo "Please answer yes or no."; break;;
