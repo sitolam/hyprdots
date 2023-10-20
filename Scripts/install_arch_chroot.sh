@@ -156,6 +156,12 @@ clear
 
 echo "${bold}Configuring grub ........${normal}"
 sleep 0.5
+
+# Configuring os_prober or not
+if [ $os_prober = "os_prober" ]; then
+sed -i 's/GRUB_DISABLE_OS_PROBER=true/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+fi
+
 grub-mkconfig -o /boot/grub/grub.cfg #TODO - os-prober
 sleep 1
 clear

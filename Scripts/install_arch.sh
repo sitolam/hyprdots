@@ -182,12 +182,22 @@ while true; do
     esac
 done
 
-
+while true; do
+    read -p "Do you want to enable OS-prober (detecting other operating systems in grub)? (Y/n) " yn
+    case $yn in
+        [Yy]|"" ) os_prober = "os-prober"
+                  export os_prober
+                ; break;;
+        [Nn]* ) os_prober = ""
+                break;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
 
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
-pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr $os_prober micro git networkmanager
 sleep 1
 clear
 
