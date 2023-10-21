@@ -232,7 +232,7 @@ clear
 
 # Unmount the drives
 echo "${bold}Unmounting the drives ........${normal}"
-umount -a
+umount -a 1> /dev/null
 sleep 1
 clear
 
