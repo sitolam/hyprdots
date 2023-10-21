@@ -43,8 +43,7 @@ clear
 # Wifi
 echo "${bold}Wifi${normal}"
 
-curl -sSf -m 20 http://google.com
-if [[ $? -eq 0 ]]; then
+if curl --output /dev/null --silent --head --fail "http://google.com"; then
     echo "${bold}Online${normal}"
 else
     echo "${bold}Offline${normal}"
