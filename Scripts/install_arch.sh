@@ -184,10 +184,10 @@ done
 while true; do
     read -p "Do you want to enable OS-prober (detecting other operating systems in grub)? (Y/n) " yn
     case $yn in
-        [Yy]|"" ) os_prober = "os-prober"
+        [Yy]|"" ) os_prober="os-prober"
                   export os_prober
                   break;;
-        [Nn]* ) os_prober = ""
+        [Nn]* ) os_prober=""
                 break;;
         * ) echo "Please answer yes or no."; break;;
     esac
