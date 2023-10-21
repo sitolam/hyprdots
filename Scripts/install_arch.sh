@@ -197,7 +197,8 @@ while true; do
         * ) echo "Please answer yes or no."; break;;
     esac
 done
-
+sleep 1
+clear
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
