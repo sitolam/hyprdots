@@ -101,6 +101,18 @@ while true; do
                 bash
                 break;;
         [Aa]* ) 
+                echo "${bold}Selecting the disk${normal}"
+                # Specify the disk device
+                lsblk
+                read -p "What disk you want to partition to? (ex./dev/sda) " device
+                sleep 0.5
+
+                echo "Wiping the disk .......(press ${bold}ctrl+c${normal} to stop)"
+                sleep 5
+                sgdisk -Z /dev/sda
+                sleep 0.5
+                clear
+
                 echo "${bold}Naming the partitions${normal}"
                 echo ""
                 echo "A partition label should only be used once!"
@@ -117,13 +129,6 @@ while true; do
                 echo "${bold}Making the partitions${normal}" 
 
                 calc() { awk "BEGIN{print $*}"; }
-
-                # Specify the disk device
-                lsblk
-                read -p "What disk you want to partition to? (ex./dev/sda) " device
-                sleep 0.5
-                clear
-
 
                 # Create the GPT partition table
                 sudo parted --script "$device" mklabel gpt
