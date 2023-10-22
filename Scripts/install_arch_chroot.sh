@@ -207,9 +207,13 @@ su $username /home/$username/install_arch_chroot_user.sh
 
 sleep 0.5
 
+
 if [ $passwordless_sudo -eq 0 ]; then
-sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 sed -i 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
+
+else
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
+
 fi
 
 exit # to leave the chroot

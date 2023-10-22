@@ -101,6 +101,18 @@ while true; do
                 bash
                 break;;
         [Aa]* ) 
+                echo "${bold}Selecting the disk${normal}"
+                # Specify the disk device
+                lsblk
+                read -p "What disk you want to partition to? (ex./dev/sda) " device
+                sleep 0.5
+
+                echo "Wiping the disk .......(press ${bold}ctrl+c${normal} to stop)"
+                sleep 5
+                sgdisk -Z /dev/sda
+                sleep 0.5
+                clear
+
                 echo "${bold}Naming the partitions${normal}"
                 echo ""
                 echo "A partition label should only be used once!"
@@ -117,13 +129,6 @@ while true; do
                 echo "${bold}Making the partitions${normal}" 
 
                 calc() { awk "BEGIN{print $*}"; }
-
-                # Specify the disk device
-                lsblk
-                read -p "What disk you want to partition to? (ex./dev/sda) " device
-                sleep 0.5
-                clear
-
 
                 # Create the GPT partition table
                 sudo parted --script "$device" mklabel gpt
@@ -184,15 +189,16 @@ done
 while true; do
     read -p "Do you want to enable OS-prober (detecting other operating systems in grub)? (Y/n) " yn
     case $yn in
-        [Yy]|"" ) os_prober = "os-prober"
+        [Yy]|"" ) os_prober="os-prober"
                   export os_prober
                   break;;
-        [Nn]* ) os_prober = ""
+        [Nn]* ) os_prober=""
                 break;;
         * ) echo "Please answer yes or no."; break;;
     esac
 done
-
+sleep 1
+clear
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
@@ -226,7 +232,7 @@ clear
 
 # Unmount the drives
 echo "${bold}Unmounting the drives ........${normal}"
-umount -a
+umount -a 1> /dev/null
 sleep 1
 clear
 
