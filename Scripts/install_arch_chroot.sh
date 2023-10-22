@@ -53,8 +53,9 @@ clear
 echo "${bold}Setting the right locales ........ ${normal}"
 cat << EOF >> /etc/profile
 #locale settings
+export LC_ALL="en_US.UTF-8"
 export LANG=en_US.UTF-8
-#export LANGUAGE="en_US:en"
+export LANGUAGE="en_US:en"
 export LC_MESSAGES="en_US.UTF-8"
 export LC_CTYPE="nl_BE@euro"
 export LC_COLLATE="nl_BE@euro"
@@ -69,8 +70,9 @@ export LC_NAME="nl_BE"
 EOF
 cat > /etc/locale.conf << EOF
 #locale settings
-LANG=en_US.UTF-8
-#export LANGUAGE="en_US:en"
+LC_ALL="en_US.UTF-8"
+LANG="en_US.UTF-8"
+LANGUAGE="en_US:en"
 LC_MESSAGES="en_US.UTF-8"
 LC_CTYPE="nl_BE@euro"
 LC_COLLATE="nl_BE@euro"
