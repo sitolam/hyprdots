@@ -160,7 +160,7 @@ echo "${bold}Configuring grub ........${normal}"
 sleep 0.5
 
 # Configuring os_prober or not
-if [ $os_prober = "os_prober" ]; then
+if [ $os_prober -eq 1 ]; then
 sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
 fi
 
