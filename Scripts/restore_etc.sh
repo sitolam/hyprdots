@@ -97,7 +97,7 @@ if pkg_installed zsh
 
     if [ "$SHELL" != "/usr/bin/zsh" ] ; then
         echo "changing shell to zsh..."
-        sudo chsh -s $(which zsh)
+        sudo chsh -s $(which zsh) $(whoami)
     fi
 
 else
