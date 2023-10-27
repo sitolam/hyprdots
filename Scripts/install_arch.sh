@@ -202,7 +202,11 @@ clear
 
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
-pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr $os_prober micro git networkmanager
+if [ os_prober -eq 1 ]; then
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr os-prober micro git networkmanager
+else
+pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
+fi
 sleep 1
 clear
 
