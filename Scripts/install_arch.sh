@@ -230,11 +230,6 @@ rm /mnt/root/install_arch_chroot.sh
 sleep 1
 clear
 
-# Unmount the drives
-echo "${bold}Unmounting the drives ........${normal}"
-umount -a 1> /dev/null
-sleep 1
-clear
 
 # Reboot
 echo "${bold}Your system is installed${normal}"
