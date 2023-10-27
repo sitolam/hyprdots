@@ -62,7 +62,7 @@ do
 
 done
 
-touch ${HOME}/.config/hypr/monitors.conf
+cp ${CfgDir}/.config/hypr/monitors.conf ${HOME}/.config/hypr/monitors.conf
 cp ${CfgDir}/.config/hypr/userprefs.conf ${HOME}/.config/hypr/userprefs.conf
 
 if nvidia_detect ; then

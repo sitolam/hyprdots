@@ -33,8 +33,8 @@ sleep 0.5
 sleep 1
 clear
 
-echo "Installing the flatpaks ........"
-sudo ./.extra/install_fpk.sh
+# echo "Installing the flatpaks ........"
+# ./.extra/install_fpk.sh
 
 
 exit # leave the user account

@@ -160,8 +160,8 @@ echo "${bold}Configuring grub ........${normal}"
 sleep 0.5
 
 # Configuring os_prober or not
-if [ $os_prober = "os_prober" ]; then
-sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+if [ $os_prober -eq 1 ]; then
+sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
 fi
 
 grub-mkconfig -o /boot/grub/grub.cfg #TODO - os-prober
@@ -210,10 +210,7 @@ sleep 0.5
 
 if [ $passwordless_sudo -eq 0 ]; then
 sed -i 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/g' /etc/sudoers
-
-else
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
-
 fi
 
 exit # to leave the chroot
