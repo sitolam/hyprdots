@@ -95,7 +95,7 @@ while true; do
     read -p "How do you want to make you partitions? (Guided:G/Automatic:a(The whole disk) " ga
     case $ga in
         [Gg]|"" )  
-                echo "${bold}Go to:${normal} https://github.com/Sitolam/hyprdots/blob/master/partitioning.md ${bold}for the guidelines${normal}"
+                echo "${bold}Go to the wiki or with this link:${normal} https://github.com/Sitolam/hyprdots/wiki/Partitioning ${bold}for the guidelines${normal}"
                 read -n 1 -s -r -p "Press any key to continue ... "
                 echo ""
                 bash
