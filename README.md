@@ -292,7 +292,7 @@ To add your own custom theme, please refer [theming wiki](https://github.com/pra
 
 <table><tr><td>
 <code>a</code><br><code>p</code><br><code>p</code><br><code>s</code></td><td><table>
-    <tr><td>firefox</td><td>browser</td></tr>
+    <tr><td>thorium-browser-bin</td><td>browser</td></tr>
     <tr><td>kitty</td><td>terminal</td></tr>
     <tr><td>neofetch</td><td>fetch tool</td></tr>
     <tr><td>dolphin</td><td>kde file manager</td></tr>
@@ -330,7 +330,7 @@ To add your own custom theme, please refer [theming wiki](https://github.com/pra
 | <kbd>Super</kbd> + <kbd>T</kbd> | launch kitty terminal
 | <kbd>Super</kbd> + <kbd>E</kbd> | launch dolphin file explorer
 | <kbd>Super</kbd> + <kbd>C</kbd> | launch vscode
-| <kbd>Super</kbd> + <kbd>F</kbd> | launch firefox
+| <kbd>Super</kbd> + <kbd>F</kbd> | launch thorium
 | <kbd>Super</kbd> + <kbd>A</kbd> | launch desktop applications (rofi)
 | <kbd>Super</kbd> + <kbd>Tab</kbd> | switch open applications (rofi)
 | <kbd>Super</kbd> + <kbd>R</kbd> | browse system files (rofi)
