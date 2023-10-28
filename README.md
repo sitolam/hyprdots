@@ -292,7 +292,7 @@ To add your own custom theme, please refer [theming wiki](https://github.com/pra
 
 <table><tr><td>
 <code>a</code><br><code>p</code><br><code>p</code><br><code>s</code></td><td><table>
-    <tr><td>thorium-browser-bin</td><td>browser</td></tr>
+    <tr><td>thorium-browser</td><td>browser</td></tr>
     <tr><td>kitty</td><td>terminal</td></tr>
     <tr><td>neofetch</td><td>fetch tool</td></tr>
     <tr><td>dolphin</td><td>kde file manager</td></tr>
