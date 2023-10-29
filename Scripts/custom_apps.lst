@@ -33,4 +33,4 @@ protonup-qt #ProtonUp
 
 # Virtualization
 virt-manager
-
+virt-bootstrap-git # A tool for creating the root filesystem of libvirt-based containers.
