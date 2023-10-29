@@ -164,7 +164,7 @@ if [ $os_prober -eq 1 ]; then
     sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
 fi
 
-grub-mkconfig -o /boot/grub/grub.cfg #TODO - os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
 sleep 1
 clear
 
