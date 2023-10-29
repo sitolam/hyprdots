@@ -36,5 +36,12 @@ clear
 # echo "Installing the flatpaks ........"
 # ./.extra/install_fpk.sh
 
+echo "${bold}Setting up applications ........${normal}"
+sleep 0.5
+./setup_applications.sh
+sleep 1
+clear
+
+
 
 exit # leave the user account
