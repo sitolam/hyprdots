@@ -53,6 +53,11 @@ ark
 zsh
 eza
 wget
+cmatrix
+tree
+autojump
+btop
+ncdu
 oh-my-zsh-git
 zsh-theme-powerlevel10k-git
 pokemon-colorscripts-git
