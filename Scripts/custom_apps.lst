@@ -30,3 +30,7 @@ obs-studio #Obs
 cartridges #Cartridges
 protontricks #ProtonTricks
 protonup-qt #ProtonUp
+
+# Virtualization
+virt-manager
+
