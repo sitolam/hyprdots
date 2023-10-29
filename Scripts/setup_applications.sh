@@ -9,7 +9,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)\
 
 
-# Wayvnc
+# Wayvnc #TODO: add password protection
 mkdir -p ~/Downloads/github/wayvnc/
 cd ~/Downloads/github/wayvnc/
 sudo pacman -S base-devel libglvnd libxkbcommon pixman gnutls jansson
