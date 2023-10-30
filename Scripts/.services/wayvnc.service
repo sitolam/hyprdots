@@ -8,7 +8,8 @@ Environment="WAYLAND_DISPLAY=wayland-1"
 Environment="XDG_RUNTIME_DIR=/run/user/1000"
 ExecStart=/root/wayvnc/wayvnc/build/wayvnc 0.0.0.0
 ExecReload=pkill -x wayvnc
-RestartSec=5
+Restart=on-failure
+RestartSec=2
 
 [Install]
 WantedBy=multi-user.target
