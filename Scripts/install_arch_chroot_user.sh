@@ -27,7 +27,7 @@ echo "${bold}Configuring custom services ........${normal}"
 sleep 0.5
 find .services -maxdepth 1 -type f | sudo xargs cp -t /etc/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl enable novnc.service
+sudo systemctl enable easy-novnc.service
 sudo systemctl enable wayvnc.service
 
 echo "${bold}Are you ready?!${normal}"
