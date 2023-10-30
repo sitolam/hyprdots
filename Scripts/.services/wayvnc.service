@@ -1,0 +1,14 @@
+[Unit]
+Description=Service for starting wayvnc server
+
+[Service]
+User=root
+Group=root
+Environment="WAYLAND_DISPLAY=wayland-1"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+ExecStart=/root/wayvnc/wayvnc/build/wayvnc 0.0.0.0
+ExecReload=pkill -x wayvnc
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

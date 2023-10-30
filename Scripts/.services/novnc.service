@@ -1,0 +1,13 @@
+[Unit]
+Description=Service for starting novnc server
+After=wayvnc.service
+
+[Service]
+User=root
+Group=root
+ExecStart=novnc
+ExecReload=pkill -x novnc
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

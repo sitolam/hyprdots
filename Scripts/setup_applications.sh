@@ -10,9 +10,9 @@ normal=$(tput sgr0)\
 
 
 # Wayvnc #TODO: add password protection
-mkdir -p ~/Downloads/github/wayvnc/
-cd ~/Downloads/github/wayvnc/
-sudo pacman -S base-devel libglvnd libxkbcommon pixman gnutls jansson
+mkdir -p /root/wayvnc
+cd /root/wayvnc
+sudo pacman -S --no-confirm base-devel libglvnd libxkbcommon pixman gnutls jansson
 
 git clone https://github.com/any1/wayvnc.git
 git clone https://github.com/any1/neatvnc.git
@@ -28,9 +28,12 @@ mkdir neatvnc/subprojects
 cd neatvnc/subprojects
 ln -s ../../aml .
 cd -
+
+cd neatvnc/src
+sed -i '/assert(server);/a \    pixman_region_intersect_rect(damage, damage, 0, 0, fb->width,fb->height);' display.c 
 #TODO: automate patch https://github.com/any1/wayvnc/issues/248
 
-
+cd -
 cd wayvnc
 
 meson build

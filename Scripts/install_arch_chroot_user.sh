@@ -16,12 +16,19 @@ echo "Changing the directory ........"
 cd ~/hyprdots
 sleep 0.5
 
-echo "Cloning the theme ........"
+echo "Cloning the repository ........"
 git clone --depth 1 https://github.com/Sitolam/hyprdots
 cd hyprdots/Scripts
 sleep 1
 
 clear
+
+echo "${bold}Configuring custom services ........${normal}"
+sleep 0.5
+find .services -maxdepth 1 -type f | sudo xargs cp -t /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable novnc.service
+sudo systemctl enable wayvnc.service
 
 echo "${bold}Are you ready?!${normal}"
 sleep 1
