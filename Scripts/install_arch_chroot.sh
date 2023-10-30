@@ -142,7 +142,7 @@ sleep 0.5
 
 echo "Enabling the NetworkManger service ........"
 systemctl enable NetworkManager
-#TODO - add the ssh service
+systemctl enable sshd
 
 sleep 1
 clear
