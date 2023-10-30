@@ -39,13 +39,4 @@ cd wayvnc
 meson build
 ninja -C build
 
-cat <<EOF > config
-enable_auth=true
-username=USERNAME
-password=PASSWORD
-EOF
-
-sed -i "s/USERNAME/$USER/g" config
-read -sp "Password for vnc login: " password
-sed -i "s/PASSWORD/$password/g" config
 exit

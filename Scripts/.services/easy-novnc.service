@@ -1,12 +1,12 @@
 [Unit]
-Description=Service for starting novnc server
+Description=Service for starting easy-novnc server
 After=wayvnc.service
 
 [Service]
 User=root
 Group=root
-ExecStart=novnc
-ExecReload=pkill -x novnc
+ExecStart=easy-novnc --no-url-password 
+ExecReload=pkill -x easy-novnc
 Restart=on-failure
 RestartSec=10
 
