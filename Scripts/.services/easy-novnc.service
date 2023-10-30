@@ -5,7 +5,7 @@ After=wayvnc.service
 [Service]
 User=root
 Group=root
-ExecStart=easy-novnc --no-url-password 
+ExecStart=easy-novnc
 ExecReload=pkill -x easy-novnc
 Restart=on-failure
 RestartSec=10
