@@ -203,9 +203,9 @@ clear
 # Installing the packages
 echo "${bold}Installing the packages ........${normal}"
 if [ os_prober -eq 1 ]; then
-    pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr os-prober micro git networkmanager
+    pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr os-prober micro git networkmanager ssh
 else
-    pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager
+    pacstrap /mnt base linux-zen linux-firmware sof-firmware base-devel grub efibootmgr micro git networkmanager ssh
 fi
 sleep 1
 clear
