@@ -39,4 +39,11 @@ cd wayvnc
 meson build
 ninja -C build
 
+# Autologin
+sudo sed -i '/#%PAM-1.0/a \auth      sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /etc/pam.d/sddm
+sudo sed -i "s/Session=/Session=hyprland/s" /etc/sddm.conf.d/kde_settings.conf
+sudo sed -i "s/User=/User=$USER/s" /etc/sddm.conf.d/kde_settings.conf
+
+
+
 exit

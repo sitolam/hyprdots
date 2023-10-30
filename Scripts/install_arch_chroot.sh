@@ -113,7 +113,8 @@ sleep 0.5
 
 echo "Making the user account"
 read -p "Enter your name for the user account: " username
-useradd -m -G wheel -s /bin/bash $username
+groupadd -r nopasswdlogin
+useradd -m -G wheel,nopasswdlogin -s /bin/bash $username
 
 echo "Setting the password for the user account"
 passwd $username
