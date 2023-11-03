@@ -44,6 +44,15 @@ sudo sed -i '/#%PAM-1.0/a \auth      sufficient      pam_succeed_if.so user ingr
 sudo sed -i "s/Session=/Session=hyprland/s" /etc/sddm.conf.d/kde_settings.conf
 sudo sed -i "s/User=/User=$USER/s" /etc/sddm.conf.d/kde_settings.conf
 
-
+mkdir -p ~/.config/autostart
+cat <<EOF > ~/.config/autostart/swaylock.desktop
+[Desktop Entry]
+Name=Swaylock
+Comment=Starting swaylock at login
+Exec=swaylock --gracer 0
+Type=Application
+Terminal=i
+Hidden=false
+EOF
 
 exit
