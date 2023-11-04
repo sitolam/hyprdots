@@ -9,7 +9,8 @@ bold=$(tput bold)
 normal=$(tput sgr0)\
 
 
-# Wayvnc #TODO: add password protection
+# Wayvnc 
+echo "${bold}Installing wayvnc${normal}"
 mkdir -p /root/wayvnc
 cd /root/wayvnc
 sudo pacman -S --no-confirm base-devel libglvnd libxkbcommon pixman gnutls jansson
@@ -39,7 +40,12 @@ cd wayvnc
 meson build
 ninja -C build
 
+sleep 1
+clear
+
+
 # Autologin
+echo "${bold}Configuring autologin${normal}"
 sudo sed -i '/#%PAM-1.0/a \auth      sufficient      pam_succeed_if.so user ingroup nopasswdlogin' /etc/pam.d/sddm
 sudo sed -i "s/Session=/Session=hyprland/s" /etc/sddm.conf.d/kde_settings.conf
 sudo sed -i "s/User=/User=$USER/s" /etc/sddm.conf.d/kde_settings.conf
@@ -54,5 +60,27 @@ Type=Application
 Terminal=i
 Hidden=false
 EOF
+
+sleep 1
+clear
+
+# Anki
+echo "${bold}Adding Anki plugins${normal}"
+while true; do
+    read -p "Do you want to copy the Anki plugins? (you need the password) (Y/n) " yn
+    case $yn in
+        [Yy]|"" ) 
+                wget https://github.com/Sitolam/hyprdots/releases/download/v1.0.0/anki_plugins.7z
+                7z x anki_plugins.7z
+                cp -r addons21 ~/.local/share/Anki2
+                break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no."; break;;
+    esac
+done
+sleep 1
+clear
+
+
 
 exit
