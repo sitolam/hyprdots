@@ -26,6 +26,7 @@ while true; do
     esac
 done
 hwclock --systohc
+timedatectl set-local-rtc 1 --adjust-system-clock
 sleep 1
 clear
 
