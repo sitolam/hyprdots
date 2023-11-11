@@ -39,4 +39,5 @@ virtualbox #VirtualBox
 
 # School
 anki-bin #Anki
+mplayer #Depency for anki sound
 notion-app-electron #Notion
