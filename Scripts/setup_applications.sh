@@ -82,5 +82,8 @@ sleep 1
 clear
 
 
+# Vscode
+echo "--ozone-platform=wayland" > ~/.config/code-flags.conf
+
 
 exit
