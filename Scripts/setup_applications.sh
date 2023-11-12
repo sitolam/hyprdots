@@ -86,4 +86,10 @@ clear
 echo "--ozone-platform=wayland" > ~/.config/code-flags.conf
 
 
+# Standard applications
+echo "${bold}Setting default applications ........${normal}"
+# Swappy
+xdg-mime default swappy.desktop image/jpeg image/png image/gif image/svg+xml image/bmp image/tiff image/vnd.microsoft.icon image/webp
+
+
 exit
