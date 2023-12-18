@@ -66,3 +66,8 @@ ncdu
 oh-my-zsh-git
 zsh-theme-powerlevel10k-git
 pokemon-colorscripts-git
+eza|zsh
+oh-my-zsh-git|zsh
+zsh-theme-powerlevel10k|zsh oh-my-zsh-git
+pokemon-colorscripts-git|zsh
+hyprdots-ctl
