@@ -9,7 +9,7 @@ spicetify-cli
 
 
 # System
-
+ttf-ms-win10-auto
 
 # Social
 
@@ -29,6 +29,7 @@ upscaler #ImageUpscaler
 
 # Audio/Video
 obs-studio #Obs
+obs-shaderfilter-git
 
 # Gaming
 cartridges #Cartridges
