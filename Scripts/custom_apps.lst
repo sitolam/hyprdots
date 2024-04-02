@@ -9,6 +9,10 @@ spotify
 spicetify-cli
 #libinput-gestures
 #gestures
+cmatrix
+tree
+autojump
+ncdu
 
 # System
 ttf-ms-win10-auto
