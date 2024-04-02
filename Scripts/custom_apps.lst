@@ -10,6 +10,7 @@ spicetify-cli
 
 # System
 ttf-ms-win10-auto
+warp-terminal
 
 # Social
 
@@ -24,6 +25,7 @@ krita #Krita
 gimp #Gimp
 #org.blender.Blender #Blender
 upscaler #ImageUpscaler
+audactiy #Audactiy
 
 # Photography
 

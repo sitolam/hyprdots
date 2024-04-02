@@ -1,5 +1,12 @@
 # System
 com.github.tchx84.Flatseal #Flatseal
+# org.gnome.Boxes #Boxes
+# com.usebottles.bottles #Bottles
+# com.raggesilver.BlackBox #BlackBox
+
+# Browser
+# com.brave.Browser #Brave
+# org.torproject.torbrowser-launcher #Tor
 
 # Social
 
@@ -16,6 +23,8 @@ io.gitlab.theevilskeleton.Upscaler #ImageUpscaler
 
 # Audio/Video
 com.obsproject.Studio #Obs
+com.github.rafostar.Clapper #Clapper
+com.github.unrud.VideoDownloader #VideoDownloader
 
 # Gaming
 hu.kramo.Cartridges #Cartridges
