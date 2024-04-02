@@ -3,7 +3,7 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 11px;
+    font-size: 10px;
     min-height: 10px;
 }
 
@@ -91,18 +91,20 @@ tooltip {
 #bluetooth,
 #custom-cliphist,
 #clock,
+#custom-cpuinfo,
 #cpu,
 #custom-gpuinfo,
 #idle_inhibitor,
+#custom-keybindhint,
 #language,
 #memory,
-#custom-mode,
 #mpris,
 #network,
 #custom-power,
 #pulseaudio,
 #custom-spotify,
 #taskbar,
+#custom-theme,
 #tray,
 #custom-updates,
 #custom-wallchange,

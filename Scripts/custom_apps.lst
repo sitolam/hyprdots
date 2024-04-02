@@ -4,9 +4,11 @@ steam
 gamemode
 #gamescope
 mangohud
+cava
 spotify
 spicetify-cli
-
+#libinput-gestures
+#gestures
 
 # System
 ttf-ms-win10-auto
