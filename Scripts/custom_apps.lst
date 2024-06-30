@@ -4,7 +4,7 @@
 # libinput-gestures                                    # actions touchpad gestures using libinput
 # gestures                                             # gui for libinput-gestures
 swayidle                                               # locking and sleeping computer
-sway-audio-idle-inhibit-git
+sway-audio-idle-inhibit-git # actions                  # prevent locking or sleeping computer when audio is playing
                       
 
 # --------------------------------------------------- // Dependencies
