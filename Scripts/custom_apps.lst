@@ -29,7 +29,7 @@ spicetify-cli                                          # cli to customize spotif
 kdeconnect                                             # phone connecting service
 
 # --------------------------------------------------- // Dependencies
-# Emoji selector
+# Emoji selector and wtype also for glyph selector
 wtype
 noto-fonts-emoji
 # Rofi Calculator
