@@ -5,6 +5,7 @@
 # gestures                                             # gui for libinput-gestures
 swayidle                                               # locking and sleeping computer
 sway-audio-idle-inhibit-git
+                      
 
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
@@ -26,3 +27,8 @@ spicetify-cli                                          # cli to customize spotif
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
+
+# --------------------------------------------------- // Dependencies
+# Emoji selector
+wtype
+noto-fonts-emoji
