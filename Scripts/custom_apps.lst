@@ -4,6 +4,7 @@
 # libinput-gestures                                    # actions touchpad gestures using libinput
 # gestures                                             # gui for libinput-gestures
 swayidle                                               # locking and sleeping computer
+sway-audio-idle-inhibit-git
 
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
