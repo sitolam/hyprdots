@@ -32,3 +32,5 @@ kdeconnect                                             # phone connecting servic
 # Emoji selector
 wtype
 noto-fonts-emoji
+# Rofi Calculator
+libqalculate
