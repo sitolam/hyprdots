@@ -34,3 +34,6 @@ wtype
 noto-fonts-emoji
 # Rofi Calculator
 libqalculate
+# Hyprland plugins
+cpio                                                   # dependency for hyprpm
+hyprwayland-scanner                                    # dependency for hyprpm
