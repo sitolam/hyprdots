@@ -78,3 +78,7 @@ if ! pkg_installed flatpak; then
 else
     echo -e "\033[0;33m[SKIP]\033[0m flatpak is already installed..."
 fi
+
+
+# hyprland plugins
+"${scrDir}/.extra/hyprland_plugins.sh"
