@@ -28,9 +28,9 @@ mangohud                                               # system performance over
 # gamescope                                            # micro-compositor for gaming
 
 # --------------------------------------------------- // Music
-cava                                                   # audio visualizer
-spotify                                                # proprietary music streaming service
-spicetify-cli                                          # cli to customize spotify client
+#cava                                                   # audio visualizer
+#spotify                                                # proprietary music streaming service
+#spicetify-cli                                          # cli to customize spotify client
 
 # --------------------------------------------------- // Apps
 # neovim                                               # vim based text editor
