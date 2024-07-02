@@ -39,4 +39,6 @@ mangohud                                               # system performance over
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
+signal-desktop                                         # signal for desktop
+element-desktop                                        # element for desktop
 
