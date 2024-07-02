@@ -5,11 +5,21 @@
 # gestures                                             # gui for libinput-gestures
 swayidle                                               # locking and sleeping computer
 sway-audio-idle-inhibit-git # actions                  # prevent locking or sleeping computer when audio is playing
+flameshot                                              # screenshot maker
                       
 
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
 # emote                                                # emoji picker gtk3
+
+# Emoji selector and wtype also for glyph selector
+wtype
+noto-fonts-emoji
+# Rofi Calculator
+libqalculate
+# Hyprland plugins
+cpio                                                   # dependency for hyprpm
+hyprwayland-scanner                                    # dependency for hyprpm
 
 # --------------------------------------------------- // Gaming
 steam                                                  # gaming platform
@@ -28,12 +38,3 @@ spicetify-cli                                          # cli to customize spotif
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
 
-# --------------------------------------------------- // Dependencies
-# Emoji selector and wtype also for glyph selector
-wtype
-noto-fonts-emoji
-# Rofi Calculator
-libqalculate
-# Hyprland plugins
-cpio                                                   # dependency for hyprpm
-hyprwayland-scanner                                    # dependency for hyprpm
