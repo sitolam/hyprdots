@@ -6,6 +6,8 @@
 swayidle                                               # locking and sleeping computer
 sway-audio-idle-inhibit-git # actions                  # prevent locking or sleeping computer when audio is playing
 flameshot                                              # screenshot maker
+tesseract                                              # ocr maker
+tesseract-data-eng                                     # ocr language english
                       
 
 # --------------------------------------------------- // Dependencies
