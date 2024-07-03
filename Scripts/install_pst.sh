@@ -61,22 +61,17 @@ fi
 "${scrDir}/restore_shl.sh"
 
 # flatpak
-if ! pkg_installed flatpak; then
 
-    echo -e "\033[0;32m[FLATPAK]\033[0m flatpak application list..."
-    awk -F '#' '$1 != "" {print "["++count"]", $1}' "${scrDir}/.extra/custom_flat.lst"
-    prompt_timer 60 "Install these flatpaks? [Y/n]"
-    fpkopt=${promptIn,,}
+echo -e "\033[0;32m[FLATPAK]\033[0m flatpak application list..."
+awk -F '#' '$1 != "" {print "["++count"]", $1}' "${scrDir}/.extra/custom_flat.lst"
+prompt_timer 60 "Install these flatpaks? [Y/n]"
+fpkopt=${promptIn,,}
 
-    if [ "${fpkopt}" = "y" ]; then
-        echo -e "\033[0;32m[FLATPAK]\033[0m installing flatpaks..."
-        "${scrDir}/.extra/install_fpk.sh"
-    else
-        echo -e "\033[0;33m[SKIP]\033[0m installing flatpaks..."
-    fi
-
+if [ "${fpkopt}" = "y" ]; then
+    echo -e "\033[0;32m[FLATPAK]\033[0m installing flatpaks..."
+    "${scrDir}/.extra/install_fpk.sh"
 else
-    echo -e "\033[0;33m[SKIP]\033[0m flatpak is already installed..."
+    echo -e "\033[0;33m[SKIP]\033[0m installing flatpaks..."
 fi
 
 
