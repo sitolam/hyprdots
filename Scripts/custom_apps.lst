@@ -35,7 +35,7 @@ mangohud                                               # system performance over
 #spicetify-cli                                          # cli to customize spotify client
 
 # --------------------------------------------------- // Apps
-# neovim                                               # vim based text editor
+neovim                                                 # vim based text editor
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
