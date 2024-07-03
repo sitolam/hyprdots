@@ -33,5 +33,5 @@ Y|Y|${HOME}/.local/share/kxmlgui5|dolphin|dolphin
 Y|Y|${HOME}/.local/share/kio/servicemenus|hydewallpaper.desktop|dolphin
 Y|Y|${HOME}/.config|libinput-gestures.conf|libinput-gestures
 N|Y|${HOME}|.floorp|floorp-bin
-N|Y|${HOME}/.cache|floorp|floorp-bin
+Y|Y|${HOME}/.cache|floorp|floorp-bin
 Y|Y|${HOME}/.config|flameshot|flameshot
