@@ -64,10 +64,18 @@ cat "${CfgLst}" | while read lst; do
         fi
 
         if [ ! -f "${pth}/${cfg_chk}" ]; then
-            cp -r "${CfgDir}${tgt}/${cfg_chk}" "${pth}"
+            if cp -r "${CfgDir}${tgt}/${cfg_chk}" "${pth}" &>/dev/null; then
+                cp -r "${CfgDir}${tgt}/${cfg_chk}" "${pth}"
+            else
+                sudo cp -r "${CfgDir}${tgt}/${cfg_chk}" "${pth}"
+            fi
             echo -e "\033[0;32m[restore]\033[0m ${pth} <-- ${CfgDir}${tgt}/${cfg_chk}..."
         elif [ "${ovrWrte}" == "Y" ]; then
-            cp -r "${CfgDir}$tgt/${cfg_chk}" "${pth}"
+            if cp -r "${CfgDir}$tgt/${cfg_chk}" "${pth}" &>/dev/null; then
+                cp -r "${CfgDir}$tgt/${cfg_chk}" "${pth}"
+            else
+                sudo cp -r "${CfgDir}$tgt/${cfg_chk}" "${pth}"
+            fi
             echo -e "\033[0;33m[overwrite]\033[0m ${pth} <-- ${CfgDir}${tgt}/${cfg_chk}..."
         else
             echo -e "\033[0;33m[preserve]\033[0m Skipping ${pth}/${cfg_chk} to preserve user setting..."

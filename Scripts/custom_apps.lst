@@ -8,7 +8,7 @@ sway-audio-idle-inhibit-git # actions                  # prevent locking or slee
 flameshot                                              # screenshot maker
 tesseract                                              # ocr maker
 tesseract-data-eng                                     # ocr language english
-                      
+gparted                                                # partition manager
 
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
