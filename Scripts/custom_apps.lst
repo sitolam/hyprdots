@@ -11,6 +11,10 @@ tesseract-data-eng                                     # ocr language english
 gparted                                                # partition manager
 ttf-ms-win11-auto                                      # windows 11 fonts
 
+# --------------------------------------------------- // Tools
+antimicrox                                             # controller configurator
+
+
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
 mpv                                                    # audio player for anki
