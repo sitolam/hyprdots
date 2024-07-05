@@ -9,7 +9,6 @@ flameshot                                              # screenshot maker
 tesseract                                              # ocr maker
 tesseract-data-eng                                     # ocr language english
 gparted                                                # partition manager
-ttf-ms-win10-auto                                      # windows 10 fonts
 ttf-ms-win11-auto                                      # windows 11 fonts
 
 # --------------------------------------------------- // Dependencies
