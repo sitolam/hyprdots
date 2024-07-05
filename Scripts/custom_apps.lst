@@ -12,7 +12,7 @@ gparted                                                # partition manager
 
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
-# emote                                                # emoji picker gtk3
+mpv                                                    # audio player for anki
 
 # Emoji selector and wtype also for glyph selector
 wtype
@@ -36,6 +36,7 @@ mangohud                                               # system performance over
 
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
+anki-bin                                               # learning app
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service

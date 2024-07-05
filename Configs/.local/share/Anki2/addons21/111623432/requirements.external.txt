@@ -1,0 +1,8 @@
+# these modules get bundled into the external directory in hypertts
+boto3
+comtypes
+databind
+espeakng
+gtts
+sentry_sdk
+cachetools
