@@ -77,3 +77,5 @@ fi
 
 # hyprland plugins
 "${scrDir}/.extra/hyprland_plugins.sh"
+# spotify spicetify
+$scrDir/../Configs/.local/share/bin/wallbashspotify.sh
