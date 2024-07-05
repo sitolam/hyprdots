@@ -35,3 +35,4 @@ Y|Y|${HOME}/.config|libinput-gestures.conf|libinput-gestures
 Y|Y|${HOME}/.config|flameshot|flameshot
 Y|Y|/usr/share/applications|gparted.desktop|gparted
 N|Y|${HOME}|.floorp|floorp
+N|Y|${HOME}/.config|nvim|neovim
