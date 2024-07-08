@@ -47,6 +47,10 @@ anki-bin                                               # learning app
 handbrake                                              # video encoding app
 bottles                                                # windows program runner
 
+# --------------------------------------------------- // Obs
+obs-studio                                             # Free, open source software for live streaming and recording
+obs-backgroundremoval                                  # Background removal plugin for OBS studio
+obs-plugin-input-overlay-bin                           # obs-studio plugin to show keyboard, gamepad and mouse input on stream.
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
