@@ -37,4 +37,4 @@ Y|Y|/usr/share/applications|gparted.desktop|gparted
 N|Y|${HOME}|.floorp|floorp
 N|Y|${HOME}/.config|nvim|neovim
 N|Y|${HOME}/.local/share/Anki2|addons21|anki-bin
-Y|Y|${HOME}/.config|antimicrox|antimicrox
+N|Y|${HOME}/.config|antimicrox|antimicrox
