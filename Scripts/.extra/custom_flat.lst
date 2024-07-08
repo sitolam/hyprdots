@@ -38,7 +38,7 @@ io.gitlab.theevilskeleton.Upscaler             # ImageUpscaler
 # ------------------------------------------- // Audio/Video
 # com.spotify.Client                           # Spotify
 # org.kde.kdenlive                             # Kdenlive
-com.obsproject.Studio                          # Obs
+# com.obsproject.Studio                        # Obs
 com.github.rafostar.Clapper                    # Clapper
 com.github.unrud.VideoDownloader               # VideoDownloader
 
