@@ -42,6 +42,8 @@ spicetify-cli                                          # cli to customize spotif
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
 anki-bin                                               # learning app
+handbrake                                              # video encoding app
+
 
 # --------------------------------------------------- // Communication
 kdeconnect                                             # phone connecting service
