@@ -44,6 +44,7 @@ spicetify-cli                                          # cli to customize spotif
 neovim                                                 # vim based text editor
 anki-bin                                               # learning app
 handbrake                                              # video encoding app
+bottles                                                # windows program runner
 
 
 # --------------------------------------------------- // Communication
