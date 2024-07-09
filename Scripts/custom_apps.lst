@@ -18,6 +18,7 @@ antimicrox                                             # controller configurator
 # --------------------------------------------------- // Dependencies
 xdg-desktop-portal-gtk                                 # xdg desktop portal using gtk
 mpv                                                    # audio player for anki
+ntfs3                                                  # support for ntfs
 
 # Emoji selector and wtype also for glyph selector
 wtype
