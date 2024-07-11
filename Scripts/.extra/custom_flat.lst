@@ -43,6 +43,6 @@ com.github.rafostar.Clapper                    # Clapper
 com.github.unrud.VideoDownloader               # VideoDownloader
 
 # ------------------------------------------- // Gaming
-hu.kramo.Cartridges                          # Cartridges
+hu.kramo.Cartridges                            # Cartridges
 com.github.Matoking.protontricks               # ProtonTricks
 net.davidotek.pupgui2                          # ProtonUp

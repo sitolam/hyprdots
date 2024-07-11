@@ -41,6 +41,7 @@ cava                                                   # audio visualizer
 spotify                                                # proprietary music streaming service
 spicetify-cli                                          # cli to customize spotify client
 qpwgraph                                               # PipeWire Graph Qt GUI Interface
+easyeffects                                            # Audio Effects for Pipewire applications
 
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
