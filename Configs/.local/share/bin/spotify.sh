@@ -5,6 +5,9 @@
 scrDir=`dirname "$(realpath "$0")"`
 source $scrDir/globalcontrol.sh
 
+
+hyprctl dispatch focusworkspaceoncurrentmonitor 10
+
 kitty --title "spotify cava" sh -c "cava" &
 sleep 0.3
 hyprctl --batch "dispatch focuswindow cava ; dispatch togglefloating ; dispatch resizeactive exact 50% 55% ; dispatch centerwindow 1 ; dispatch moveactive 70% 60%" 
