@@ -16,21 +16,19 @@ fi
 
 hyprctl dispatch focusworkspaceoncurrentmonitor 10
 
-
 if [ -z "$(hyprctl clients | grep "$spotifyTitle" | grep -v "grep" | grep -v "./spotify.sh")" ]; then
+    hyprctl dispatch movecursor 0 0 
+
+    kitty --title "spotify cava" sh -c "exit"
     kitty --title "spotify cava" sh -c "cava" &
-    sleep 0.3
-    hyprctl --batch "dispatch focuswindow cava ; dispatch togglefloating"
-    hyprctl --batch "dispatch focuswindow cava ; dispatch resizeactive exact 50% 55%"
-    hyprctl --batch "dispatch focuswindow cava ; dispatch centerwindow 1"
-    hyprctl --batch "dispatch focuswindow cava ; dispatch moveactive 70% 60%"
+    sleep 0.2
+    hyprctl --batch "dispatch resizeactive exact 50% 55% ;  dispatch centerwindow 1 ; dispatch moveactive 70% 60%"
+    
 
     spotify &
     sleep 1
-    hyprctl --batch "dispatch focuswindow initialTitle:^($spotifyTitle)$ ; dispatch resizeactive exact 50% 55%"
-    hyprctl --batch "dispatch focuswindow initialTitle:^($spotifyTitle)$ ; dispatch centerwindow 1"
-    hyprctl --batch "dispatch focuswindow initialTitle:^($spotifyTitle)$ ; dispatch moveactive -70% -60%"
-
+    hyprctl --batch "dispatch resizeactive exact 50% 55% ; dispatch centerwindow 1 ; dispatch moveactive -70% -60%"
+    
     sleep 3
     playerctl play-pause
 fi
