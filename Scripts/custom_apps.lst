@@ -21,6 +21,7 @@ xdg-desktop-portal-gtk                                 # xdg desktop portal usin
 mpv                                                    # audio player for anki
 ntfs-3g                                                # support for ntfs
 rust-analyzer                                          # analyzer for rust
+dart                                                   # the dart language
 
 # Emoji selector and wtype also for glyph selector
 wtype

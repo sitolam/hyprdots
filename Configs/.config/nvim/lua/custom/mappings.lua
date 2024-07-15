@@ -34,4 +34,10 @@ M.rust = {
   }
 }
 
+M.dart = {
+  n = {
+    ["<leader>rd"] = { "<cmd> :!dart run main.dart <CR>" },
+  }
+}
+
 return M
