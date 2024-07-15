@@ -35,7 +35,6 @@ Y|Y|${HOME}/.config|libinput-gestures.conf|libinput-gestures
 Y|Y|${HOME}/.config|flameshot|flameshot
 Y|Y|/usr/share/applications|gparted.desktop|gparted
 Y|Y|/usr/share/applications|dev.vencord.Vesktop.desktop|flatpak
-Y|Y|/usr/share/applications|im.fluffychat.Fluffychat.desktop|flatpak
 N|Y|${HOME}|.floorp|floorp
 Y|Y|${HOME}/.config|nvim|neovim
 N|Y|${HOME}/.local/share/Anki2|addons21|anki-bin
