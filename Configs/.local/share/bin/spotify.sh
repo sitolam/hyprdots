@@ -21,7 +21,7 @@ if [ -z "$(hyprctl clients | grep "$spotifyTitle" | grep -v "grep" | grep -v "./
 
     kitty --title "spotify cava" sh -c "exit"
     kitty --title "spotify cava" sh -c "cava" &
-    sleep 0.2
+    sleep 0.5
     hyprctl --batch "dispatch resizeactive exact 50% 55% ;  dispatch centerwindow 1 ; dispatch moveactive 70% 60%"
     
 
