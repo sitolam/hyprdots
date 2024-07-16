@@ -27,8 +27,11 @@ if [ -z "$(hyprctl clients | grep "$spotifyTitle" | grep -v "grep" | grep -v "./
 
     spotify &
     sleep 1
-    hyprctl --batch "dispatch focuswindow 'initialtitle:($spotifyTitle)' ; dispatch resizeactive exact 50% 55% ; dispatch centerwindow 1 ; dispatch moveactive -70% -60%"
-    
+    until [ ! -z "$(hyprctl clients | grep "$spotifyTitle" | grep -v "grep" | grep -v "./spotify.sh")" ] 
+    do
+     echo "" 
+    done
+    hyprctl --batch "dispatch focuswindow 'initialtitle:($spotifyTitle)' ; dispatch resizeactive exact 50% 55% ; dispatch centerwindow 1 ; dispatch moveactive -70% -60%" 
     sleep 3
     playerctl play-pause
 fi
