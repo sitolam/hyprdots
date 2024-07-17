@@ -1,4 +1,4 @@
 NetworkManager
 bluetooth
 sddm
-libvirtd.socket # virt-manager
+libvirtd
