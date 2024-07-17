@@ -11,6 +11,7 @@ tesseract-data-eng                                     # ocr language english
 gparted                                                # partition manager
 ttf-ms-win11-auto                                      # windows 11 fonts
 wine                                                   # program to run windows programs
+virt-manager                                           # virtual machine manager
 
 # --------------------------------------------------- // Tools
 antimicrox                                             # controller configurator
