@@ -3,7 +3,7 @@
         "rotate": ${r_deg},
         "format-alt": "{:%R:%S 󰃭 %d·%m·%y}",
         "interval": 1,
-        "tooltip-format": "<tt>{calendar}</tt>",
+        "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
