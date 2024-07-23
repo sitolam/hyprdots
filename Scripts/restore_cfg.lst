@@ -40,3 +40,4 @@ Y|Y|${HOME}/.config|nvim|neovim
 N|Y|${HOME}/.local/share/Anki2|addons21|anki-bin
 N|Y|${HOME}/.config|antimicrox|antimicrox
 Y|Y|${HOME}/.ssh|config|openssh
+Y|Y|${HOME}/.config/kanata|config.kdb|kanata-bin
