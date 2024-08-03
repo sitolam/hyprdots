@@ -24,7 +24,7 @@ while read -r fst uuid name; do
         continue
     fi
 
-done < <(lsblk --noheadings --raw -o TYPE,FSTYPE,UUID,NAME | awk '{if ($1=="part" && $2=="ext4") print $2, $3, "/dev/" $4}')
+done < <(lsblk --noheadings --raw -o TYPE,FSTYPE,UUID,NAME,LABEL | awk '{if ($1=="part" && $5=="shared\\x20drive") print $2, $3, "/dev/" $4}')
 
 if [ ! -z "${fstEntry}" ]; then
     echo -e "${fstEntry}\n" | sudo tee -a /etc/fstab
