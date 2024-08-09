@@ -16,6 +16,7 @@ virt-manager                                           # virtual machine manager
 # --------------------------------------------------- // Tools
 antimicrox                                             # controller configurator
 kanata-bin                                             # keyboard configurator
+ncdu                                                   # storage usage analyzer
 
 
 # --------------------------------------------------- // Dependencies
