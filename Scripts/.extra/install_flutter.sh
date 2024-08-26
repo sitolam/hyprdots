@@ -21,12 +21,10 @@ if [[ ${#aurhPkg[@]} -gt 0 ]]; then
     "${aurhlpr}" ${use_default} -Sy "${aurhPkg[@]}"
 fi
 
-sudo cp -R /opt/android-sdk ~
 
-cd ~
-sudo chown -R $USER:$(groups ${USER} | awk '{print $1}') android-sdk
+sudo chown -R $USER:$(groups ${USER} | awk '{print $1}') /opt/android-sdk
 
-echo 'export ANDROID_HOME=$HOME/android-sdk' >> $HOME/.zshrc
+echo 'export ANDROID_HOME=/opt/android-sdk' >> $HOME/.zshrc
 echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> $HOME/.zshrc
 echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk' >> $HOME/.zshrc
 
