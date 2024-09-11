@@ -52,6 +52,7 @@ easyeffects                                            # Audio Effects for Pipew
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
 anki-bin                                               # learning app
+flowtime                                               # motivates you without losing concentration
 handbrake                                              # video encoding app
 bottles                                                # windows program runner
 
