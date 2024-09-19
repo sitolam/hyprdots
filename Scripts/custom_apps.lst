@@ -35,6 +35,7 @@ libqalculate
 # Hyprland plugins
 cpio                                                   # dependency for hyprpm
 hyprwayland-scanner                                    # dependency for hyprpm
+swayosd-git                                            # A GTK based on screen display for keyboard shortcuts like caps-lock and volume
 
 # --------------------------------------------------- // Gaming
 steam                                                  # gaming platform
