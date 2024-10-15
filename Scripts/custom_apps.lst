@@ -49,6 +49,7 @@ spotify                                                # proprietary music strea
 spicetify-cli                                          # cli to customize spotify client
 qpwgraph                                               # PipeWire Graph Qt GUI Interface
 easyeffects                                            # Audio Effects for Pipewire applications
+noisetorch                                             # Real-time microphone noise suppression on Linux
 
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
