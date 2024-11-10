@@ -27,6 +27,7 @@ rust-analyzer                                          # analyzer for rust
 qemu-base                                              # qemu virtualization for virt-manager
 dnsmasq                                                # use sudo virsh net-start default
 exfatprogs                                             # gparted exfat compatibility
+hyde-cli-git                                           # the hyde-cli
 
 # Emoji selector and wtype also for glyph selector
 wtype
