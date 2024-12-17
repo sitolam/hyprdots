@@ -82,6 +82,21 @@ alias .5='cd ../../../../..'
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
 
+# Custom aliases
+alias sync='sudo pacman -Syyy'
+alias install='sudo pacman -S'
+alias update='sudo pacman -Syyu'
+alias search='sudo pacman -Ss'
+alias search-local='sudo pacman -Qs'
+alias pkg-info='sudo pacman -Qi'
+alias local-install='sudo pacman -U'
+alias clr-cache='sudo pacman -Scc'
+alias unlock='sudo rm -f /var/lib/pacman/db.lck'
+alias remove='sudo pacman -R'
+alias autoremove='sudo pacman -Rns'
+
+alias makeiso='sudo mkarchiso -v .'
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
