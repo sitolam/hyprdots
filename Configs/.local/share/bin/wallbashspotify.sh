@@ -30,6 +30,9 @@ if pkg_installed spotify && pkg_installed spicetify-cli ; then
         spicetify backup apply
         spicetify config current_theme Sleek
         spicetify config color_scheme Wallbash
+        # custom
+        spicetify config extensions shuffle+.js
+
         spicetify apply
     fi
 
