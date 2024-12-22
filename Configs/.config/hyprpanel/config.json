@@ -23,5 +23,56 @@
   "menus.clock.weather.key": "57748d33f7a2face7a937eb99dd22417",
   "theme.bar.transparent": false,
   "theme.bar.opacity": 90,
-  "bar.network.showWifiInfo": true
+  "bar.network.showWifiInfo": true,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  }
 }
