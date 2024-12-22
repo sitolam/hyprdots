@@ -46,9 +46,13 @@ if pkg_installed zsh && pkg_installed oh-my-zsh-git; then
 fi
 
 # set shell
-if [[ "$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')" != "${myShell}" ]]; then
-    echo -e "\033[0;32m[SHELL]\033[0m changing shell to ${myShell}..."
-    chsh -s "$(which "${myShell}")"
+current_shell=$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')
+if [[ "${current_shell}" != "${myShell}" ]]; then
+    while [[ "${current_shell}" != "${myShell}" ]]; do
+        echo -e "\033[0;32m[SHELL]\033[0m changing shell to ${myShell}..."
+        chsh -s "$(which "${myShell}")"
+        current_shell=$(grep "/${USER}:" /etc/passwd | awk -F '/' '{print $NF}')
+    done
 else
     echo -e "\033[0;33m[SKIP]\033[0m ${myShell} is already set as shell..."
 fi
