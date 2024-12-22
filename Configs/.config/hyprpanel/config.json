@@ -1,0 +1,26 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.weight": 500,
+  "bar.volume.rightClick": "pavucontrol",
+  "bar.volume.middleClick": "pavucontrol",
+  "theme.bar.location": "bottom",
+  "theme.bar.floating": false,
+  "bar.autoHide": "fullscreen",
+  "theme.font.size": "1rem",
+  "bar.network.middleClick": "nm-connection-editor",
+  "bar.network.rightClick": "nm-connection-editor",
+  "bar.bluetooth.rightClick": "blueman-manager",
+  "bar.bluetooth.middleClick": "blueman-manager",
+  "bar.systray.ignore": [
+    "blueman",
+    "spotify-client"
+  ],
+  "bar.clock.format": "%a %b %d  %H:%M",
+  "bar.notifications.show_total": false,
+  "menus.clock.time.military": true,
+  "menus.clock.weather.location": "9900",
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.weather.key": "57748d33f7a2face7a937eb99dd22417",
+  "theme.bar.transparent": false,
+  "theme.bar.opacity": 90
+}

@@ -79,3 +79,5 @@ fi
 "${scrDir}/.extra/hyprland_plugins.sh"
 # spotify spicetify
 $scrDir/../Configs/.local/share/bin/wallbashspotify.sh
+# kill waybar when using hyprpanel
+pkill waybar &> /dev/null

@@ -43,3 +43,4 @@ N|Y|${HOME}/.local/share/Anki2|addons21|anki-bin
 N|Y|${HOME}/.config|antimicrox|antimicrox
 Y|Y|${HOME}/.ssh|config|openssh
 Y|Y|${HOME}/.config/kanata|config.kdb|kanata-bin
+Y|Y|${HOME}/.config/hyprpanel|config.json|ags-hyprpanel-git
