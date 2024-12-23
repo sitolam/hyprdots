@@ -10,8 +10,8 @@ if [ $HYPRGAMEMODE = 1 ]; then
 	sed -i 's/^\(.*animation:.*\)$/\/\* \1 \*\//g' $FILE
 	sed -i 's/^\(.*transition:.*\)$/\/\* \1 \*\//g' $FILE
 fi
-# killall waybar
-# waybar >/dev/null 2>&1 &
+killall waybar
+waybar >/dev/null 2>&1 &
 
 # Hyprland performance
 if [ $HYPRGAMEMODE = 1 ]; then
