@@ -27,7 +27,7 @@ hyprland                                               # wlroots-based wayland c
 dunst                                                  # notification daemon
 rofi-wayland                                           # application launcher
 waybar                                                 # system bar
-#ags-hyprpanel-git                                      # system bar
+ags-hyprpanel-git                                      # system bar
 swww                                                   # wallpaper
 swaylock-effects-git                                   # lock screen
 wlogout                                                # logout menu
