@@ -18,9 +18,8 @@
   "bar.clock.format": "%a %b %d  %H:%M",
   "bar.notifications.show_total": false,
   "menus.clock.time.military": true,
-  "menus.clock.weather.location": "9900",
+  "menus.clock.weather.location": "Eeklo, BE",
   "menus.clock.weather.unit": "metric",
-  "menus.clock.weather.key": "57748d33f7a2face7a937eb99dd22417",
   "theme.bar.transparent": false,
   "theme.bar.opacity": 90,
   "bar.network.showWifiInfo": true,
@@ -43,6 +42,7 @@
     "1": {
       "left": [
         "dashboard",
+        "updates",
         "workspaces",
         "windowtitle"
       ],
@@ -74,5 +74,59 @@
         "notifications"
       ]
     }
-  }
+  },
+  "bar.customModules.updates.leftClick": "hyprctl dispatch exec 'systemupdate.sh up'",
+  "bar.customModules.updates.rightClick": "",
+  "bar.customModules.updates.padZero": false,
+  "bar.customModules.updates.label": true,
+  "bar.customModules.weather.unit": "metric",
+  "menus.clock.weather.enabled": true,
+  "menus.clock.weather.interval": 60000,
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.show_numbered": false,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.workspaceMask": false,
+  "bar.windowtitle.class_name": false,
+  "bar.windowtitle.custom_title": false,
+  "bar.windowtitle.label": true,
+  "bar.windowtitle.icon": true,
+  "bar.windowtitle.title_map": [
+    [
+      "kitty",
+      "󰄛",
+      "Kitty Terminal"
+    ],
+    [
+      "zen",
+      "󰈹",
+      "Zen"
+    ],
+    [
+      "discord",
+      "",
+      "Discord"
+    ],
+    [
+      "org.kde.dolphin",
+      "",
+      "Dolphin"
+    ]
+  ],
+  "theme.bar.buttons.network.enableBorder": false,
+  "bar.bluetooth.label": true,
+  "theme.osd.muted_zero": true,
+  "menus.dashboard.powermenu.sleep": "swaylock -f && systemctl suspend",
+  "menus.dashboard.controls.enabled": true,
+  "menus.dashboard.stats.enable_gpu": true,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "󰈹",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "zen-browser",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen browser",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "hyprctl dispatch exec ~/.local/share/bin/spotify.sh \"Spotify Premium\"",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "flatpak run dev.vencord.Vesktop",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "hypctl dispatch exec pkill -x rofi || ~/.local/share/bin/rofilaunch.sh d",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "hyprctl dispatch exec ~/.local/share/bin/screenshot.sh s",
+  "menus.power.showLabel": true,
+  "bar.battery.hideLabelWhenFull": false,
+  "theme.bar.buttons.battery.enableBorder": false
 }

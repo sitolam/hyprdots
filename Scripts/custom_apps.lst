@@ -28,6 +28,7 @@ qemu-base                                              # qemu virtualization for
 dnsmasq                                                # use sudo virsh net-start default
 exfatprogs                                             # gparted exfat compatibility
 hyde-cli-git                                           # the hyde-cli
+python-gpustat                                         # gpu support hyprpanel
 
 # Emoji selector and wtype also for glyph selector
 wtype
