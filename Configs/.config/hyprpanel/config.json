@@ -116,7 +116,7 @@
   "theme.bar.buttons.network.enableBorder": false,
   "bar.bluetooth.label": true,
   "theme.osd.muted_zero": true,
-  "menus.dashboard.powermenu.sleep": "swaylock -f && systemctl suspend",
+  "menus.dashboard.powermenu.sleep": "hyprctl dispatch exec 'swaylock -f --grace 0 && systemctl suspend'",
   "menus.dashboard.controls.enabled": true,
   "menus.dashboard.stats.enable_gpu": true,
   "menus.dashboard.shortcuts.left.shortcut1.icon": "󰈹",
