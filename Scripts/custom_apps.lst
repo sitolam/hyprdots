@@ -17,6 +17,7 @@ virt-manager                                           # virtual machine manager
 antimicrox                                             # controller configurator
 kanata-bin                                             # keyboard configurator
 ncdu                                                   # storage usage analyzer
+wdisplays                                              # wayland display manager
 
 
 # --------------------------------------------------- // Dependencies
