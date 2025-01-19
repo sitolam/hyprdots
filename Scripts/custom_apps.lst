@@ -57,7 +57,7 @@ noisetorch                                             # Real-time microphone no
 
 # --------------------------------------------------- // Apps
 neovim                                                 # vim based text editor
-anki-bin                                               # learning app
+anki                                                   # learning app
 flowtime                                               # motivates you without losing concentration
 handbrake                                              # video encoding app
 bottles                                                # windows program runner
