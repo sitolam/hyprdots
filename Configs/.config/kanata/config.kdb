@@ -1,11 +1,43 @@
-(defsrc
+(defcfg
+    log-layer-changes no
+    process-unmapped-keys yes ;; nodig zodat bij caps-word alle letters captital + dan werk tap-hold beter
+    concurrent-tap-hold yes
+)
+
+ ;; define keys that will be modified (all keys still processed)
+ (defsrc
     caps
+    a s d f g h j k l ;
+    ;; TODO mss alt keys rebinden?
 )
 
+;; default/base layer modifications always active
+(deflayer default
+    @cap
+    @a @s @d @f _ _ @j @k @l @;
+)
+
+;; values used by multiple changes
+(defvar
+    tap-time 200
+    hold-time 250
+)
+
+(defchordsv2-experimental 
+    ;; (j  k     ) esc 100 all-released ()
+    (lshift rshift) rght 100 all-released ()
+)
+
+;; remapping between physical keys and functionality
 (defalias
-    escctrl (tap-hold 100 100 esc lctrl)
-)
-
-(deflayer base
-    @escctrl
+    capsword (caps-word 2000)
+    cap (tap-hold-press $tap-time $hold-time esc @capsword )
+    a (tap-hold $tap-time $hold-time a lmet)
+    s (tap-hold $tap-time $hold-time s lalt)
+    d (tap-hold $tap-time $hold-time d lsft)
+    f (tap-hold $tap-time $hold-time f lctl)
+    j (tap-hold $tap-time $hold-time j rctl)
+    k (tap-hold $tap-time $hold-time k rsft)
+    l (tap-hold $tap-time $hold-time l lalt)
+    ; (tap-hold $tap-time $hold-time ; lmet)
 )
