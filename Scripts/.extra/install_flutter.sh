@@ -24,7 +24,7 @@ fi
 
 sudo chown -R $USER:$(groups ${USER} | awk '{print $1}') /opt/android-sdk
 
-echo 'export ANDROID_HOME=/opt/android-sdk' >> $HOME/.zshrc
+echo -e '\nexport ANDROID_HOME=/opt/android-sdk' >> $HOME/.zshrc
 echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> $HOME/.zshrc
 echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk' >> $HOME/.zshrc
 
